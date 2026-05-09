@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-05-09T11:00:29Z",
+  "last_updated": "2026-05-09T11:20:10Z",
   "version": "1.0",
-  "vehicle_count": 96,
+  "vehicle_count": 106,
   "vehicles": [
     {
       "id": "tesla-model-3-2024",
@@ -1512,7 +1512,7 @@
       "price_usd": 27990,
       "country": "Japan",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Honda_e_Advance_%E2%80%93_f_18102020.jpg/640px-Honda_e_Advance_%E2%80%93_f_18102020.jpg",
       "description": "Compact city EV with retro styling, ideal for urban commuting."
     },
     {
@@ -1533,7 +1533,7 @@
       "price_usd": 32990,
       "country": "Japan",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Nissan_Leaf_%28ZE2%29_autoMOBIL_T%C3%BCbingen_2025_DSC_2752.jpg/640px-Nissan_Leaf_%28ZE2%29_autoMOBIL_T%C3%BCbingen_2025_DSC_2752.jpg",
       "description": "The long‑standing Leaf receives a larger battery and updated tech for a modern EV experience."
     },
     {
@@ -1554,7 +1554,7 @@
       "price_usd": 64990,
       "country": "Sweden",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Polestar_4_DSC_8232_%28cropped_2%29.jpg/640px-Polestar_4_DSC_8232_%28cropped_2%29.jpg",
       "description": "Polestar's first SUV, combining Scandinavian design with strong performance and a 300‑mile range."
     },
     {
@@ -1575,7 +1575,7 @@
       "price_usd": 48990,
       "country": "South Korea",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/2024_Kia_EV5_Earth_Exclusive_AWD_%28Thailand%29_front_view.png/640px-2024_Kia_EV5_Earth_Exclusive_AWD_%28Thailand%29_front_view.png",
       "description": "A compact three‑row SUV that slots between the EV6 and the larger EV9, offering versatile interior space."
     },
     {
@@ -1596,7 +1596,7 @@
       "price_usd": 119000,
       "country": "Sweden",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Volvo_FL_210_mit_Kofferaufbau_%282018%29.jpg/640px-Volvo_FL_210_mit_Kofferaufbau_%282018%29.jpg",
       "description": "Volvo's electric heavy‑duty truck designed for urban distribution with a robust 120 kWh battery."
     },
     {
@@ -1617,7 +1617,7 @@
       "price_usd": null,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Iowa_City_Transit_104.jpg/640px-Iowa_City_Transit_104.jpg",
       "description": "Proterra's latest high‑capacity transit bus with modular battery packs and fast‑charge capability."
     },
     {
@@ -1638,7 +1638,7 @@
       "price_usd": 39990,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Fisker_Pear_Motorworld_Munich_1X7A0123.jpg/640px-Fisker_Pear_Motorworld_Munich_1X7A0123.jpg",
       "description": "Fisker's affordable compact SUV aimed at the mass market, featuring a solar roof and sustainable materials."
     },
     {
@@ -1701,7 +1701,7 @@
       "price_usd": 35990,
       "country": "Japan",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/2021_Mazda_MX-30_Front.jpg/640px-2021_Mazda_MX-30_Front.jpg",
       "description": "Mazda's compact crossover EV with distinctive freestyle doors and a focus on sustainable materials."
     },
     {
@@ -1722,7 +1722,7 @@
       "price_usd": 44990,
       "country": "Japan",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/2024_Honda_Prologue_Touring%2C_front_7.11.25.jpg/640px-2024_Honda_Prologue_Touring%2C_front_7.11.25.jpg",
       "description": "Honda's first dedicated EV SUV, built on a new e‑architecture platform with a 77 kWh pack."
     },
     {
@@ -1785,7 +1785,7 @@
       "price_usd": 27990,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Volkswagen_ID._Polo_IAA_2025_DSC_1387.jpg/640px-Volkswagen_ID._Polo_IAA_2025_DSC_1387.jpg",
       "description": "Volkswagen's affordable entry‑level electric hatchback, aimed at European city markets."
     },
     {
@@ -1806,7 +1806,7 @@
       "price_usd": 44990,
       "country": "China",
       "global_availability": false,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/2020_Leapmotor_C11_%28front%29.jpg/640px-2020_Leapmotor_C11_%28front%29.jpg",
       "description": "Leapmotor's flagship three‑row electric SUV, offering a 100 kWh pack and advanced driver‑assist features."
     },
     {
@@ -1827,7 +1827,7 @@
       "price_usd": 48990,
       "country": "South Korea",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Hyundai_IONIQ_electric_Premium_%E2%80%93_Frontansicht%2C_7._Mai_2017%2C_D%C3%BCsseldorf.jpg/640px-Hyundai_IONIQ_electric_Premium_%E2%80%93_Frontansicht%2C_7._Mai_2017%2C_D%C3%BCsseldorf.jpg",
       "description": "Hyundai's flagship three-row electric SUV offering spacious interior and fast charging."
     },
     {
@@ -1848,7 +1848,7 @@
       "price_usd": 53990,
       "country": "Sweden",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/2019_Volvo_XC40_T5_Momentum_in_Bright_Silver_Metallic%2C_front_left%2C_2025-09-22.jpg/640px-2019_Volvo_XC40_T5_Momentum_in_Bright_Silver_Metallic%2C_front_left%2C_2025-09-22.jpg",
       "description": "Compact luxury SUV with Scandinavian design and a 78 kWh battery."
     },
     {
@@ -1869,7 +1869,7 @@
       "price_usd": 67990,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Mercedes-Benz_EQC_400_4MATIC_AMG_Line_%28N_293%29_%E2%80%93_f_02042021.jpg/640px-Mercedes-Benz_EQC_400_4MATIC_AMG_Line_%28N_293%29_%E2%80%93_f_02042021.jpg",
       "description": "Mercedes' first all‑electric SUV, featuring a premium interior and 400 hp dual‑motor system."
     },
     {
@@ -1890,7 +1890,7 @@
       "price_usd": 55990,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/BMW_i4_IMG_6695.jpg/640px-BMW_i4_IMG_6695.jpg",
       "description": "Entry‑level i4 with rear‑wheel drive, balancing performance and efficiency."
     },
     {
@@ -1911,7 +1911,7 @@
       "price_usd": 39990,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/2020_Volkswagen_ID.3_1st_Front.jpg/640px-2020_Volkswagen_ID.3_1st_Front.jpg",
       "description": "VW's compact hatchback EV, now offered with a larger battery and higher output."
     },
     {
@@ -2018,6 +2018,216 @@
       "global_availability": true,
       "image_url": "",
       "description": "Porsche's first electric compact SUV, delivering sports‑car dynamics in a practical package."
+    },
+    {
+      "id": "genesis-gv60-2024",
+      "make": "Genesis",
+      "model": "GV60",
+      "year": 2024,
+      "type": "suv",
+      "variant": "Advanced",
+      "range_mi": 280,
+      "range_km": 450,
+      "battery_kwh": 77.4,
+      "acceleration_0_60_sec": 4.7,
+      "top_speed_mph": 130,
+      "top_speed_kmh": 209,
+      "dc_fast_charge_kw": 250,
+      "charge_time_10_80_min": 30,
+      "price_usd": 55990,
+      "country": "South Korea",
+      "global_availability": true,
+      "image_url": "",
+      "description": "Genesis' first dedicated EV SUV, offering a premium interior and dual‑motor performance."
+    },
+    {
+      "id": "genesis-g80-electrified-2024",
+      "make": "Genesis",
+      "model": "G80 Electrified",
+      "year": 2024,
+      "type": "sedan",
+      "variant": "Long Range",
+      "range_mi": 300,
+      "range_km": 483,
+      "battery_kwh": 87.0,
+      "acceleration_0_60_sec": 5.2,
+      "top_speed_mph": 140,
+      "top_speed_kmh": 225,
+      "dc_fast_charge_kw": 200,
+      "charge_time_10_80_min": 35,
+      "price_usd": 62990,
+      "country": "South Korea",
+      "global_availability": true,
+      "image_url": "",
+      "description": "Luxury midsize sedan with a spacious cabin and a 87 kWh battery delivering over 300 miles of range."
+    },
+    {
+      "id": "subaru-solterra-2024",
+      "make": "Subaru",
+      "model": "Solterra",
+      "year": 2024,
+      "type": "suv",
+      "variant": "Premium",
+      "range_mi": 250,
+      "range_km": 402,
+      "battery_kwh": 71.0,
+      "acceleration_0_60_sec": 6.5,
+      "top_speed_mph": 115,
+      "top_speed_kmh": 185,
+      "dc_fast_charge_kw": 150,
+      "charge_time_10_80_min": 40,
+      "price_usd": 44990,
+      "country": "Japan",
+      "global_availability": true,
+      "image_url": "",
+      "description": "Subaru's first all‑electric SUV, featuring standard all‑wheel drive and rugged off‑road capability."
+    },
+    {
+      "id": "freightliner-ecascadia-2024",
+      "make": "Freightliner",
+      "model": "eCascadia",
+      "year": 2024,
+      "type": "commercial",
+      "variant": null,
+      "range_mi": 250,
+      "range_km": 402,
+      "battery_kwh": 600,
+      "acceleration_0_60_sec": null,
+      "top_speed_mph": 75,
+      "top_speed_kmh": 121,
+      "dc_fast_charge_kw": 350,
+      "charge_time_10_80_min": 45,
+      "price_usd": 210000,
+      "country": "USA",
+      "global_availability": true,
+      "image_url": "",
+      "description": "Freightliner's Class 8 electric truck designed for long‑haul routes with a 600 kWh battery pack."
+    },
+    {
+      "id": "volvo-vnr-electric-2024",
+      "make": "Volvo",
+      "model": "VNR Electric",
+      "year": 2024,
+      "type": "commercial",
+      "variant": null,
+      "range_mi": 200,
+      "range_km": 322,
+      "battery_kwh": 300,
+      "acceleration_0_60_sec": null,
+      "top_speed_mph": 78,
+      "top_speed_kmh": 125,
+      "dc_fast_charge_kw": 250,
+      "charge_time_10_80_min": 40,
+      "price_usd": 185000,
+      "country": "Sweden",
+      "global_availability": true,
+      "image_url": "",
+      "description": "Volvo's medium‑duty electric truck offering up to 200 miles of range for regional deliveries."
+    },
+    {
+      "id": "energica-eva-ribelle-2024",
+      "make": "Energica",
+      "model": "Eva Ribelle",
+      "year": 2024,
+      "type": "motorcycle",
+      "variant": "Standard",
+      "range_mi": 200,
+      "range_km": 322,
+      "battery_kwh": 22.5,
+      "acceleration_0_60_sec": 2.9,
+      "top_speed_mph": 124,
+      "top_speed_kmh": 200,
+      "dc_fast_charge_kw": 100,
+      "charge_time_10_80_min": 20,
+      "price_usd": 29990,
+      "country": "Italy",
+      "global_availability": true,
+      "image_url": "",
+      "description": "High‑performance electric sportbike with a 22.5 kWh pack and 0‑60 mph in under 3 seconds."
+    },
+    {
+      "id": "peugeot-e-2008-2024",
+      "make": "Peugeot",
+      "model": "e-2008",
+      "year": 2024,
+      "type": "suv",
+      "variant": "GT",
+      "range_mi": 260,
+      "range_km": 418,
+      "battery_kwh": 50,
+      "acceleration_0_60_sec": 8.5,
+      "top_speed_mph": 112,
+      "top_speed_kmh": 180,
+      "dc_fast_charge_kw": 100,
+      "charge_time_10_80_min": 30,
+      "price_usd": 34990,
+      "country": "France",
+      "global_availability": true,
+      "image_url": "",
+      "description": "Compact electric SUV from Peugeot, combining French styling with a practical 50 kWh battery."
+    },
+    {
+      "id": "renault-zoe-2024",
+      "make": "Renault",
+      "model": "Zoe",
+      "year": 2024,
+      "type": "sedan",
+      "variant": "R135",
+      "range_mi": 245,
+      "range_km": 395,
+      "battery_kwh": 52,
+      "acceleration_0_60_sec": 9.5,
+      "top_speed_mph": 108,
+      "top_speed_kmh": 174,
+      "dc_fast_charge_kw": 130,
+      "charge_time_10_80_min": 30,
+      "price_usd": 32990,
+      "country": "France",
+      "global_availability": true,
+      "image_url": "",
+      "description": "Renault's best‑selling city EV, updated for 2024 with a larger 52 kWh battery and improved interior."
+    },
+    {
+      "id": "nova-bus-lfse-2024",
+      "make": "Nova Bus",
+      "model": "LFSe",
+      "year": 2024,
+      "type": "bus",
+      "variant": null,
+      "range_mi": 250,
+      "range_km": 402,
+      "battery_kwh": 350,
+      "acceleration_0_60_sec": null,
+      "top_speed_mph": 55,
+      "top_speed_kmh": 89,
+      "dc_fast_charge_kw": 250,
+      "charge_time_10_80_min": 45,
+      "price_usd": null,
+      "country": "Canada",
+      "global_availability": true,
+      "image_url": "",
+      "description": "Zero‑emission low‑floor transit bus for North American cities, featuring a 350 kWh battery."
+    },
+    {
+      "id": "ford-f-150-lightning-2025",
+      "make": "Ford",
+      "model": "F-150 Lightning",
+      "year": 2025,
+      "type": "truck",
+      "variant": "Platinum",
+      "range_mi": 350,
+      "range_km": 563,
+      "battery_kwh": 131,
+      "acceleration_0_60_sec": 3.5,
+      "top_speed_mph": 110,
+      "top_speed_kmh": 177,
+      "dc_fast_charge_kw": 300,
+      "charge_time_10_80_min": 30,
+      "price_usd": 69990,
+      "country": "USA",
+      "global_availability": true,
+      "image_url": "",
+      "description": "2025 update of Ford's electric pickup with a larger 131 kWh battery and higher payload capacity."
     }
   ]
 }
