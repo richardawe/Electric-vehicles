@@ -146,12 +146,34 @@ def save_vehicles(data):
 
 # ── Wikipedia image fetching ───────────────────────────────────────────
 
+def is_bad_image(url):
+    """Return True for logos, SVGs, or non-free en.wikipedia files."""
+    if not url:
+        return False
+    lower = url.lower()
+    fname = lower.split("/")[-1].split("?")[0]
+    return (
+        "logo" in fname
+        or fname.endswith(".svg")
+        or "icon" in fname
+        or "/wikipedia/en/" in lower   # non-free fair-use files
+    )
+
+
+def _good_src(src):
+    """Return upgraded thumbnail URL if src is a usable photo, else empty string."""
+    if not src or is_bad_image(src):
+        return ""
+    return re.sub(r"/\d+px-", "/640px-", src)
+
+
 def fetch_image_by_article(article_title):
     """Fetch main image for a Wikipedia article title.
 
     Tries two Wikipedia APIs in sequence:
       1. REST summary endpoint (fast, returns thumbnail directly)
       2. MediaWiki pageimages API (more reliable for articles where REST lacks thumbnail)
+    Rejects logos, SVGs, and non-free Wikipedia files.
     """
     import urllib.parse
     slug = urllib.parse.quote(article_title.replace(" ", "_"), safe="-._~")
@@ -162,14 +184,13 @@ def fetch_image_by_article(article_title):
             timeout=10,
         )
         if resp.status_code == 200:
-            data = resp.json()
-            src = data.get("thumbnail", {}).get("source", "")
+            src = _good_src(resp.json().get("thumbnail", {}).get("source", ""))
             if src:
-                return re.sub(r"/\d+px-", "/640px-", src)
+                return src
     except Exception:
         pass
 
-    # Fallback: MediaWiki pageimages API — works when REST summary lacks thumbnail
+    # Fallback: MediaWiki pageimages API
     try:
         resp2 = requests.get(WIKIPEDIA_API, params={
             "action": "query", "titles": article_title,
@@ -179,9 +200,9 @@ def fetch_image_by_article(article_title):
         if resp2.status_code == 200:
             pages = resp2.json().get("query", {}).get("pages", {})
             for page in pages.values():
-                src = page.get("thumbnail", {}).get("source", "")
+                src = _good_src(page.get("thumbnail", {}).get("source", ""))
                 if src:
-                    return re.sub(r"/\d+px-", "/640px-", src)
+                    return src
     except Exception:
         pass
 
@@ -277,9 +298,9 @@ def populate_images(vehicles):
       2. Wikipedia article search — for new vehicles not in the map
       3. Wikimedia Commons file search — last resort (covers anything missing)
     """
-    missing = [v for v in vehicles if not v.get("image_url")]
+    missing = [v for v in vehicles if not v.get("image_url") or is_bad_image(v.get("image_url", ""))]
     if not missing:
-        print("All vehicles already have images.")
+        print("All vehicles already have good images.")
         return 0
 
     print(f"Fetching images for {len(missing)} vehicle(s)…")

@@ -189,7 +189,7 @@
       "price_usd": 38615,
       "country": "South Korea",
       "global_availability": true,
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Hyundai_IONIQ_electric_Premium_%E2%80%93_Frontansicht%2C_7._Mai_2017%2C_D%C3%BCsseldorf.jpg/960px-Hyundai_IONIQ_electric_Premium_%E2%80%93_Frontansicht%2C_7._Mai_2017%2C_D%C3%BCsseldorf.jpg",
+      "image_url": "",
       "description": "Award-winning aerodynamic sedan with a drag coefficient of just 0.21 Cd, built on 800V architecture for 18-minute fast charging."
     },
     {
@@ -210,7 +210,7 @@
       "price_usd": 44000,
       "country": "China",
       "global_availability": true,
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/BYD_Seal_06_EV_003.jpg/960px-BYD_Seal_06_EV_003.jpg",
+      "image_url": "",
       "description": "BYD's flagship electric sedan featuring Blade Battery technology and is available in both China and international markets."
     },
     {
@@ -798,7 +798,7 @@
       "price_usd": 23990,
       "country": "Italy",
       "global_availability": true,
-      "image_url": "https://upload.wikimedia.org/wikipedia/en/b/b4/Energica_Motor_Company_logo.png",
+      "image_url": "",
       "description": "Europe's first touring electric motorcycle with the longest range in its class, CCS DC fast charging, and comprehensive luggage options."
     },
     {
@@ -840,7 +840,7 @@
       "price_usd": 4999,
       "country": "China",
       "global_availability": true,
-      "image_url": "https://upload.wikimedia.org/wikipedia/en/7/70/SUPER_SOCO_logo.png",
+      "image_url": "",
       "description": "An affordable urban electric motorcycle with retro café racer styling and a removable battery for convenient charging anywhere."
     },
     {
@@ -882,7 +882,7 @@
       "price_usd": 69900,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/2019_Mercedes-Benz_Sprinter_314_CDi_2.1.jpg/640px-2019_Mercedes-Benz_Sprinter_314_CDi_2.1.jpg",
+      "image_url": "",
       "description": "Mercedes-Benz's best-selling cargo van goes electric with three battery options, offering fleet operators zero-emission last-mile delivery."
     },
     {
@@ -903,7 +903,7 @@
       "price_usd": 49574,
       "country": "USA",
       "global_availability": true,
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/2016_Ford_Transit_350_2.2.jpg/640px-2016_Ford_Transit_350_2.2.jpg",
+      "image_url": "",
       "description": "Ford's Transit goes electric with 2,205 lbs of payload capacity, Pro Power Onboard, and Ford Pro telematics for fleet management."
     },
     {
@@ -924,7 +924,7 @@
       "price_usd": 25000,
       "country": "China",
       "global_availability": true,
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/BYD_M3_DM_01_--_Auto_China_--_2014-04-23.jpg/640px-BYD_M3_DM_01_--_Auto_China_--_2014-04-23.jpg",
+      "image_url": "",
       "description": "BYD's lightweight electric delivery van, widely adopted by logistics companies and ride-hailing fleets across Asia and Europe."
     },
     {
@@ -987,7 +987,7 @@
       "price_usd": 400000,
       "country": "China",
       "global_availability": true,
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Yutong_Logo.png/640px-Yutong_Logo.png",
+      "image_url": "",
       "description": "Yutong's flagship electric city bus, the world's top-selling e-bus brand, with advanced energy management and real-time fleet telematics."
     },
     {
@@ -1176,7 +1176,7 @@
       "price_usd": 48990,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/2022_BMW_X1_sDrive18d_M_Sport_MHEV_Automatic_2.0.jpg/640px-2022_BMW_X1_sDrive18d_M_Sport_MHEV_Automatic_2.0.jpg",
+      "image_url": "",
       "description": "BMW's entry‑level electric SUV, sharing the iX platform and offering up to 260 miles of range."
     },
     {
