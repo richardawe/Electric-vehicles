@@ -18,7 +18,72 @@ VEHICLES_FILE = os.path.join(os.path.dirname(__file__), "..", "data", "vehicles.
 
 MODEL = "openai/gpt-oss-120b:free"
 WIKIPEDIA_API = "https://en.wikipedia.org/w/api.php"
+WIKIPEDIA_REST = "https://en.wikipedia.org/api/rest_v1/page/summary"
 WIKIPEDIA_UA = "EVShowcase/1.0 (github.com/richardawe/electric-vehicles)"
+
+# Explicit Wikipedia article title per vehicle ID.
+# This avoids unreliable search and guarantees we get the right image.
+ARTICLE_MAP = {
+    "tesla-model-3-2024":           "Tesla Model 3",
+    "tesla-model-s-plaid-2024":     "Tesla Model S",
+    "lucid-air-grand-touring-2024": "Lucid Air",
+    "bmw-i4-m50-2024":              "BMW i4",
+    "polestar-2-2024":              "Polestar 2",
+    "audi-etron-gt-2024":           "Audi e-tron GT",
+    "porsche-taycan-2024":          "Porsche Taycan",
+    "mercedes-eqs-450-2024":        "Mercedes-Benz EQS",
+    "hyundai-ioniq6-2024":          "Hyundai Ioniq 6",
+    "byd-han-ev-2024":              "BYD Han",
+    "nio-et7-2024":                 "NIO ET7",
+    "xpeng-p7-2024":                "Xpeng P7",
+    "tesla-model-y-2024":           "Tesla Model Y",
+    "tesla-model-x-plaid-2024":     "Tesla Model X",
+    "rivian-r1s-2024":              "Rivian R1S",
+    "ford-mustang-mach-e-2024":     "Ford Mustang Mach-E",
+    "hyundai-ioniq5-2024":          "Hyundai Ioniq 5",
+    "kia-ev6-gt-2024":              "Kia EV6",
+    "volkswagen-id4-2024":          "Volkswagen ID.4",
+    "bmw-ix-xdrive50-2024":         "BMW iX",
+    "audi-q8-etron-2024":           "Audi Q8 e-tron",
+    "cadillac-lyriq-2024":          "Cadillac Lyriq",
+    "volvo-ex90-2024":              "Volvo EX90",
+    "byd-atto3-2024":               "BYD Atto 3",
+    "tesla-cybertruck-awd-2024":    "Tesla Cybertruck",
+    "rivian-r1t-2024":              "Rivian R1T",
+    "ford-f150-lightning-2024":     "Ford F-150 Lightning",
+    "gmc-hummer-ev-2024":           "GMC Hummer EV",
+    "chevy-silverado-ev-2024":      "Chevrolet Silverado EV",
+    "porsche-taycan-turbo-gt-2024": "Porsche Taycan",
+    "rimac-nevera-2024":            "Rimac Nevera",
+    "lotus-eletre-r-2024":          "Lotus Eletre",
+    "tesla-roadster-2025":          "Tesla Roadster (second generation)",
+    "aspark-owl-2024":              "Aspark Owl",
+    "pininfarina-battista-2024":    "Automobili Pininfarina Battista",
+    "zero-srf-2024":                "Zero Motorcycles",
+    "harley-livewire-one-2024":     "LiveWire (motorcycle brand)",
+    "energica-experia-2024":        "Energica Motor Company",
+    "lightning-ls218-2024":         "Lightning Motorcycles",
+    "super-soco-tc-max-2024":       "Super Soco",
+    "volkswagen-id-buzz-2024":      "Volkswagen ID. Buzz",
+    "mercedes-esprinter-2024":      "Mercedes-Benz eSprinter",
+    "ford-e-transit-2024":          "Ford E-Transit",
+    "byd-t3-2024":                  "BYD T3",
+    "rivian-edv700-2024":           "Rivian EDV",
+    "byd-k9-2024":                  "BYD eBus-12",
+    "yutong-e12-2024":              "Yutong",
+    "proterra-catalyst-e2-2024":    "Proterra",
+    "new-flyer-xcelsior-xt-2024":   "New Flyer Xcelsior",
+    "byd-c9-2024":                  "BYD C9",
+    "kia-ev9-2024":                 "Kia EV9",
+    "nissan-ariya-2024":            "Nissan Ariya",
+    "toyota-bz4x-2024":             "Toyota bZ4X",
+    "fisker-ocean-2024":            "Fisker Ocean",
+    "chevrolet-bolt-euv-2024":      "Chevrolet Bolt EUV",
+    "bmw-ix1-2024":                 "BMW iX1",
+    "mercedes-eqe-2024":            "Mercedes-Benz EQE",
+    "byd-dolphin-2024":             "BYD Dolphin",
+    "renault-megane-e-tech-2024":   "Renault Mégane E-Tech",
+}
 
 VALID_TYPES = {"sedan", "suv", "truck", "sports", "motorcycle", "van", "bus", "commercial"}
 
@@ -37,56 +102,52 @@ def save_vehicles(data):
 
 # ── Wikipedia image fetching ───────────────────────────────────────────
 
-def wikipedia_image_for_title(title):
-    """Return the thumbnail URL for a Wikipedia article title, or ''."""
+def fetch_image_by_article(article_title):
+    """Fetch main image via Wikipedia REST API (no search needed, very reliable)."""
+    import urllib.parse
+    slug = urllib.parse.quote(article_title.replace(" ", "_"), safe="")
     try:
-        resp = requests.get(WIKIPEDIA_API, params={
-            "action": "query",
-            "titles": title,
-            "prop": "pageimages",
-            "pithumbsize": 640,
-            "piprop": "thumbnail",
-            "format": "json",
-        }, headers={"User-Agent": WIKIPEDIA_UA}, timeout=10)
-        pages = resp.json()["query"]["pages"]
-        for page in pages.values():
-            src = page.get("thumbnail", {}).get("source", "")
+        resp = requests.get(
+            f"{WIKIPEDIA_REST}/{slug}",
+            headers={"User-Agent": WIKIPEDIA_UA},
+            timeout=10,
+        )
+        if resp.status_code == 200:
+            data = resp.json()
+            src = data.get("thumbnail", {}).get("source", "")
             if src:
-                return src
+                # Upgrade thumbnail width from default (320) to 640
+                return re.sub(r"/\d+px-", "/640px-", src)
     except Exception:
         pass
     return ""
 
 
-def fetch_wikipedia_image(make, model):
-    """Search Wikipedia for a vehicle and return its main photo URL."""
+def fetch_image_by_search(make, model):
+    """Fallback: search Wikipedia and return the first relevant article's image."""
+    make_words = make.replace("-", " ").lower().split()
+    model_words = [w for w in model.lower().split() if len(w) > 2]
     try:
         resp = requests.get(WIKIPEDIA_API, params={
-            "action": "query",
-            "list": "search",
-            "srsearch": f"{make} {model} electric vehicle",
-            "srlimit": 3,
-            "format": "json",
+            "action": "query", "list": "search",
+            "srsearch": f"{make} {model}", "srlimit": 5, "format": "json",
         }, headers={"User-Agent": WIKIPEDIA_UA}, timeout=10)
         results = resp.json()["query"]["search"]
     except Exception:
         return ""
 
-    for result in results[:3]:
-        title = result["title"]
-        title_lower = title.lower()
-        # Require at least one of make/model to appear in the article title
-        if make.lower() not in title_lower and model.lower() not in title_lower:
+    for result in results[:5]:
+        title = result["title"].lower()
+        if not any(w in title for w in make_words) and not any(w in title for w in model_words):
             continue
-        url = wikipedia_image_for_title(title)
+        url = fetch_image_by_article(result["title"])
         if url:
             return url
-
     return ""
 
 
 def populate_images(vehicles):
-    """Fill in image_url for every vehicle that currently has none."""
+    """Fill image_url for every vehicle that currently has none."""
     missing = [v for v in vehicles if not v.get("image_url")]
     if not missing:
         print("All vehicles already have images.")
@@ -95,14 +156,20 @@ def populate_images(vehicles):
     print(f"Fetching Wikipedia images for {len(missing)} vehicle(s)…")
     filled = 0
     for v in missing:
-        url = fetch_wikipedia_image(v["make"], v["model"])
+        vid = v["id"]
+        # 1. Try hardcoded article title (guaranteed correct article)
+        article = ARTICLE_MAP.get(vid)
+        url = fetch_image_by_article(article) if article else ""
+        # 2. Fall back to search for new/unknown vehicles
+        if not url:
+            url = fetch_image_by_search(v["make"], v["model"])
         if url:
             v["image_url"] = url
             filled += 1
             print(f"  ✓ {v['make']} {v['model']}")
         else:
             print(f"  – {v['make']} {v['model']} (no image found)")
-        time.sleep(0.5)  # respectful rate-limiting for Wikipedia
+        time.sleep(0.3)
 
     print(f"Images filled: {filled}/{len(missing)}")
     return filled
