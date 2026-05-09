@@ -252,17 +252,34 @@ def populate_images(vehicles):
 # ── OpenRouter LLM call ────────────────────────────────────────────────
 
 def extract_json(text):
-    """Return the first JSON object found in text, even if wrapped in prose."""
+    """Return the first valid JSON object found in text.
+
+    Handles reasoning models (gpt-oss-120b, DeepSeek R1, etc.) that wrap
+    their chain-of-thought in <think>…</think> or similar tags before
+    outputting the actual JSON payload.
+    """
+    # Strip chain-of-thought wrappers emitted by reasoning models
+    text = re.sub(r"<think>.*?</think>", "", text, flags=re.DOTALL)
+    text = re.sub(r"<reasoning>.*?</reasoning>", "", text, flags=re.DOTALL)
+    text = re.sub(r"<thought>.*?</thought>", "", text, flags=re.DOTALL)
+    text = text.strip()
+
+    # 1. Direct parse (model returned clean JSON)
     try:
         return json.loads(text)
     except json.JSONDecodeError:
         pass
-    fence = re.search(r"```(?:json)?\s*(\{.*?\})\s*```", text, re.DOTALL)
-    if fence:
-        try:
-            return json.loads(fence.group(1))
-        except json.JSONDecodeError:
-            pass
+
+    # 2. JSON inside a markdown code fence
+    for pattern in (r"```json\s*(\{.*?\})\s*```", r"```\s*(\{.*?\})\s*```"):
+        m = re.search(pattern, text, re.DOTALL)
+        if m:
+            try:
+                return json.loads(m.group(1))
+            except json.JSONDecodeError:
+                pass
+
+    # 3. Bracket-match the outermost {...}
     start = text.find("{")
     if start != -1:
         depth = 0
@@ -276,6 +293,7 @@ def extract_json(text):
                         return json.loads(text[start: i + 1])
                     except json.JSONDecodeError:
                         break
+
     raise ValueError("No valid JSON object found in response")
 
 
