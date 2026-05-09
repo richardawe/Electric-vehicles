@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-05-09T10:47:13Z",
+  "last_updated": "2026-05-09T11:00:29Z",
   "version": "1.0",
-  "vehicle_count": 86,
+  "vehicle_count": 96,
   "vehicles": [
     {
       "id": "tesla-model-3-2024",
@@ -714,7 +714,7 @@
       "price_usd": 3600000,
       "country": "Japan",
       "global_availability": false,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Aspark_Owl%2C_IAA_2017%2C_Frankfurt_%281Y7A3341%29.jpg/640px-Aspark_Owl%2C_IAA_2017%2C_Frankfurt_%281Y7A3341%29.jpg",
       "description": "Japan's ultra-low electric hypercar produced in a limited run of 50 units, built entirely from carbon fiber with four independent motors."
     },
     {
@@ -735,7 +735,7 @@
       "price_usd": 2200000,
       "country": "Italy",
       "global_availability": false,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/2019_Automobili_Pininfarina_Battista_Front.jpg/640px-2019_Automobili_Pininfarina_Battista_Front.jpg",
       "description": "Italy's most powerful road car ever, hand-built in Turin with 1,877 hp from four motors on Rimac's technology platform."
     },
     {
@@ -756,7 +756,7 @@
       "price_usd": 20995,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/2011_zero-xu.jpg/640px-2011_zero-xu.jpg",
       "description": "Zero's flagship naked electric streetfighter with a Bosch Motorcycle Stability Control system and seamless torque delivery from 0 rpm."
     },
     {
@@ -777,7 +777,7 @@
       "price_usd": 22799,
       "country": "USA",
       "global_availability": false,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Harley_Davidson_LiveWire_right_noBG.jpg/640px-Harley_Davidson_LiveWire_right_noBG.jpg",
       "description": "Harley-Davidson's purpose-built electric motorcycle brand, engineered for urban riding with a connected app and over-the-air updates."
     },
     {
@@ -798,7 +798,7 @@
       "price_usd": 23990,
       "country": "Italy",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/en/b/b4/Energica_Motor_Company_logo.png",
       "description": "Europe's first touring electric motorcycle with the longest range in its class, CCS DC fast charging, and comprehensive luggage options."
     },
     {
@@ -819,7 +819,7 @@
       "price_usd": 38888,
       "country": "USA",
       "global_availability": false,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Lightning_LS-218_%2819805047992%29.jpg/640px-Lightning_LS-218_%2819805047992%29.jpg",
       "description": "The world's fastest production motorcycle, achieving 218 mph at Bonneville Salt Flats with a carbon fiber monocoque chassis."
     },
     {
@@ -840,7 +840,7 @@
       "price_usd": 4999,
       "country": "China",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/en/7/70/SUPER_SOCO_logo.png",
       "description": "An affordable urban electric motorcycle with retro café racer styling and a removable battery for convenient charging anywhere."
     },
     {
@@ -861,7 +861,7 @@
       "price_usd": 54400,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Volkswagen_ID._Buzz_1X7A6263.jpg/640px-Volkswagen_ID._Buzz_1X7A6263.jpg",
       "description": "The iconic VW Microbus reborn as a zero-emission family van, available in short and long-wheelbase versions with up to seven seats."
     },
     {
@@ -882,7 +882,7 @@
       "price_usd": 69900,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/2019_Mercedes-Benz_Sprinter_314_CDi_2.1.jpg/640px-2019_Mercedes-Benz_Sprinter_314_CDi_2.1.jpg",
       "description": "Mercedes-Benz's best-selling cargo van goes electric with three battery options, offering fleet operators zero-emission last-mile delivery."
     },
     {
@@ -903,7 +903,7 @@
       "price_usd": 49574,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/2016_Ford_Transit_350_2.2.jpg/640px-2016_Ford_Transit_350_2.2.jpg",
       "description": "Ford's Transit goes electric with 2,205 lbs of payload capacity, Pro Power Onboard, and Ford Pro telematics for fleet management."
     },
     {
@@ -924,7 +924,7 @@
       "price_usd": 25000,
       "country": "China",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/BYD_M3_DM_01_--_Auto_China_--_2014-04-23.jpg/640px-BYD_M3_DM_01_--_Auto_China_--_2014-04-23.jpg",
       "description": "BYD's lightweight electric delivery van, widely adopted by logistics companies and ride-hailing fleets across Asia and Europe."
     },
     {
@@ -966,7 +966,7 @@
       "price_usd": 350000,
       "country": "China",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Dalian_BRT_BYD_K9Fe.jpg/640px-Dalian_BRT_BYD_K9Fe.jpg",
       "description": "The world's most-deployed electric bus, with over 70,000 units operating across 300+ cities in 50+ countries worldwide."
     },
     {
@@ -987,7 +987,7 @@
       "price_usd": 400000,
       "country": "China",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Yutong_Logo.png/640px-Yutong_Logo.png",
       "description": "Yutong's flagship electric city bus, the world's top-selling e-bus brand, with advanced energy management and real-time fleet telematics."
     },
     {
@@ -1008,7 +1008,7 @@
       "price_usd": 800000,
       "country": "USA",
       "global_availability": false,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Proterra_electric_bus_leaving_Eastgate_P%26R_%2822998410693%29.jpg/640px-Proterra_electric_bus_leaving_Eastgate_P%26R_%2822998410693%29.jpg",
       "description": "America's leading electric transit bus with the longest range of any battery-electric bus, manufactured in Burlingame, California."
     },
     {
@@ -1029,7 +1029,7 @@
       "price_usd": 750000,
       "country": "Canada",
       "global_availability": false,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/DDOT_XDE40_2532_inside_Coolidge_Terminal_garage.jpg/640px-DDOT_XDE40_2532_inside_Coolidge_Terminal_garage.jpg",
       "description": "North America's most widely deployed heavy-duty transit bus platform, with Xcelsior Charge serving transit agencies across the US and Canada."
     },
     {
@@ -1050,7 +1050,7 @@
       "price_usd": 450000,
       "country": "China",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/BYD_C9_electric_coach._Spielvogel.jpg/960px-BYD_C9_electric_coach._Spielvogel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "description": "BYD's double-decker electric coach, operating in cities including London and Singapore, replacing diesel-powered tourist and inter-city coaches."
     },
     {
@@ -1407,7 +1407,7 @@
       "price_usd": 79990,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Lucid_Showroom_Miami_Worldcenter_29_June_2023_-_2.jpg/640px-Lucid_Showroom_Miami_Worldcenter_29_June_2023_-_2.jpg",
       "description": "Lucid's first electric SUV, delivering luxury, long range, and performance comparable to the Air sedan."
     },
     {
@@ -1428,7 +1428,7 @@
       "price_usd": 48990,
       "country": "South Korea",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Investigations_representing_the_departments._Greek%2C_Latin%2C_comparative_philology%2C_classical_arch%C3%A6ology_.._%28IA_investigationsre00univ%29.pdf/page1-960px-Investigations_representing_the_departments._Greek%2C_Latin%2C_comparative_philology%2C_classical_arch%C3%A6ology_.._%28IA_investigationsre00univ%29.pdf.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "description": "Kia's three‑row electric SUV, offering a spacious interior and a competitive range for families."
     },
     {
@@ -1470,7 +1470,7 @@
       "price_usd": 74990,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/2020_Mercedes-Benz_GLB_200_AMG_Line_Premium_2.0_Front.jpg/640px-2020_Mercedes-Benz_GLB_200_AMG_Line_Premium_2.0_Front.jpg",
       "description": "A midsize electric SUV that blends Mercedes luxury with a practical electric drivetrain."
     },
     {
@@ -1491,7 +1491,7 @@
       "price_usd": 44990,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Volkswagen_ID._Buzz_1X7A6263.jpg/640px-Volkswagen_ID._Buzz_1X7A6263.jpg",
       "description": "VW's sleek coupe‑style EV built on the MEB platform, offering a balance of range and style."
     },
     {
@@ -1808,6 +1808,216 @@
       "global_availability": false,
       "image_url": "",
       "description": "Leapmotor's flagship three‑row electric SUV, offering a 100 kWh pack and advanced driver‑assist features."
+    },
+    {
+      "id": "hyundai-ioniq-8-2024",
+      "make": "Hyundai",
+      "model": "IONIQ 8",
+      "year": 2024,
+      "type": "suv",
+      "variant": "Long Range",
+      "range_mi": 300,
+      "range_km": 483,
+      "battery_kwh": 77.0,
+      "acceleration_0_60_sec": 5.2,
+      "top_speed_mph": 115,
+      "top_speed_kmh": 185,
+      "dc_fast_charge_kw": 250,
+      "charge_time_10_80_min": 24,
+      "price_usd": 48990,
+      "country": "South Korea",
+      "global_availability": true,
+      "image_url": "",
+      "description": "Hyundai's flagship three-row electric SUV offering spacious interior and fast charging."
+    },
+    {
+      "id": "volvo-xc40-recharge-2024",
+      "make": "Volvo",
+      "model": "XC40 Recharge",
+      "year": 2024,
+      "type": "suv",
+      "variant": "Twin Motor",
+      "range_mi": 260,
+      "range_km": 418,
+      "battery_kwh": 78.0,
+      "acceleration_0_60_sec": 4.9,
+      "top_speed_mph": 112,
+      "top_speed_kmh": 180,
+      "dc_fast_charge_kw": 150,
+      "charge_time_10_80_min": 30,
+      "price_usd": 53990,
+      "country": "Sweden",
+      "global_availability": true,
+      "image_url": "",
+      "description": "Compact luxury SUV with Scandinavian design and a 78 kWh battery."
+    },
+    {
+      "id": "mercedes-eqc-2024",
+      "make": "Mercedes-Benz",
+      "model": "EQC",
+      "year": 2024,
+      "type": "suv",
+      "variant": "400 4MATIC",
+      "range_mi": 260,
+      "range_km": 418,
+      "battery_kwh": 80.0,
+      "acceleration_0_60_sec": 5.1,
+      "top_speed_mph": 112,
+      "top_speed_kmh": 180,
+      "dc_fast_charge_kw": 200,
+      "charge_time_10_80_min": 28,
+      "price_usd": 67990,
+      "country": "Germany",
+      "global_availability": true,
+      "image_url": "",
+      "description": "Mercedes' first all‑electric SUV, featuring a premium interior and 400 hp dual‑motor system."
+    },
+    {
+      "id": "bmw-i4-edrive40-2024",
+      "make": "BMW",
+      "model": "i4 eDrive40",
+      "year": 2024,
+      "type": "sedan",
+      "variant": "eDrive40",
+      "range_mi": 300,
+      "range_km": 483,
+      "battery_kwh": 81.0,
+      "acceleration_0_60_sec": 5.7,
+      "top_speed_mph": 118,
+      "top_speed_kmh": 190,
+      "dc_fast_charge_kw": 200,
+      "charge_time_10_80_min": 30,
+      "price_usd": 55990,
+      "country": "Germany",
+      "global_availability": true,
+      "image_url": "",
+      "description": "Entry‑level i4 with rear‑wheel drive, balancing performance and efficiency."
+    },
+    {
+      "id": "volkswagen-id-3-2024",
+      "make": "Volkswagen",
+      "model": "ID.3",
+      "year": 2024,
+      "type": "sedan",
+      "variant": "Pro Performance",
+      "range_mi": 260,
+      "range_km": 418,
+      "battery_kwh": 58.0,
+      "acceleration_0_60_sec": 7.5,
+      "top_speed_mph": 99,
+      "top_speed_kmh": 160,
+      "dc_fast_charge_kw": 125,
+      "charge_time_10_80_min": 35,
+      "price_usd": 39990,
+      "country": "Germany",
+      "global_availability": true,
+      "image_url": "",
+      "description": "VW's compact hatchback EV, now offered with a larger battery and higher output."
+    },
+    {
+      "id": "skoda-enyaq-iv-2024",
+      "make": "Škoda",
+      "model": "Enyaq iV",
+      "year": 2024,
+      "type": "suv",
+      "variant": "80",
+      "range_mi": 280,
+      "range_km": 450,
+      "battery_kwh": 77.0,
+      "acceleration_0_60_sec": 6.9,
+      "top_speed_mph": 112,
+      "top_speed_kmh": 180,
+      "dc_fast_charge_kw": 125,
+      "charge_time_10_80_min": 32,
+      "price_usd": 45990,
+      "country": "Czech Republic",
+      "global_availability": true,
+      "image_url": "",
+      "description": "Skoda's spacious family SUV with a practical interior and competitive range."
+    },
+    {
+      "id": "peugeot-e-208-2024",
+      "make": "Peugeot",
+      "model": "e-208",
+      "year": 2024,
+      "type": "sedan",
+      "variant": "GT",
+      "range_mi": 210,
+      "range_km": 338,
+      "battery_kwh": 50.0,
+      "acceleration_0_60_sec": 6.5,
+      "top_speed_mph": 99,
+      "top_speed_kmh": 160,
+      "dc_fast_charge_kw": 100,
+      "charge_time_10_80_min": 30,
+      "price_usd": 32990,
+      "country": "France",
+      "global_availability": true,
+      "image_url": "",
+      "description": "Peugeot's sporty city hatchback with a lively driving character."
+    },
+    {
+      "id": "opel-corsa-e-2024",
+      "make": "Opel",
+      "model": "Corsa-e",
+      "year": 2024,
+      "type": "sedan",
+      "variant": null,
+      "range_mi": 210,
+      "range_km": 338,
+      "battery_kwh": 50.0,
+      "acceleration_0_60_sec": 8.5,
+      "top_speed_mph": 93,
+      "top_speed_kmh": 150,
+      "dc_fast_charge_kw": 100,
+      "charge_time_10_80_min": 30,
+      "price_usd": 31990,
+      "country": "Germany",
+      "global_availability": true,
+      "image_url": "",
+      "description": "Opel's entry‑level electric hatchback, sharing its platform with the Peugeot e‑208."
+    },
+    {
+      "id": "kia-ev6-standard-2024",
+      "make": "Kia",
+      "model": "EV6",
+      "year": 2024,
+      "type": "suv",
+      "variant": "Standard Range RWD",
+      "range_mi": 260,
+      "range_km": 418,
+      "battery_kwh": 58.0,
+      "acceleration_0_60_sec": 7.2,
+      "top_speed_mph": 115,
+      "top_speed_kmh": 185,
+      "dc_fast_charge_kw": 225,
+      "charge_time_10_80_min": 27,
+      "price_usd": 44990,
+      "country": "South Korea",
+      "global_availability": true,
+      "image_url": "",
+      "description": "Base‑spec EV6 offering a balance of price, range and fast‑charging capability."
+    },
+    {
+      "id": "porsche-macan-ev-2024",
+      "make": "Porsche",
+      "model": "Macan EV",
+      "year": 2024,
+      "type": "suv",
+      "variant": "Base",
+      "range_mi": 250,
+      "range_km": 402,
+      "battery_kwh": 81.0,
+      "acceleration_0_60_sec": 4.9,
+      "top_speed_mph": 124,
+      "top_speed_kmh": 200,
+      "dc_fast_charge_kw": 250,
+      "charge_time_10_80_min": 22,
+      "price_usd": 74990,
+      "country": "Germany",
+      "global_availability": true,
+      "image_url": "",
+      "description": "Porsche's first electric compact SUV, delivering sports‑car dynamics in a practical package."
     }
   ]
 }
