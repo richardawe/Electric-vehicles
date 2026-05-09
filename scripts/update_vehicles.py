@@ -7,7 +7,6 @@ Also fetches real car photos from Wikipedia for any vehicle with a blank image_u
 import json
 import os
 import re
-import sys
 import time
 import requests
 from datetime import datetime, timezone
@@ -59,19 +58,19 @@ ARTICLE_MAP = {
     "tesla-roadster-2025":          "Tesla Roadster (second generation)",
     "aspark-owl-2024":              "Aspark Owl",
     "pininfarina-battista-2024":    "Automobili Pininfarina Battista",
-    "zero-srf-2024":                "Zero Motorcycles",
-    "harley-livewire-one-2024":     "LiveWire (motorcycle brand)",
-    "energica-experia-2024":        "Energica Motor Company",
-    "lightning-ls218-2024":         "Lightning Motorcycles",
-    "super-soco-tc-max-2024":       "Super Soco",
+    "zero-srf-2024":                "Zero SR/F",
+    "harley-livewire-one-2024":     "LiveWire One",
+    "energica-experia-2024":        "Energica Experia",
+    "lightning-ls218-2024":         "Lightning LS-218",
+    "super-soco-tc-max-2024":       "Super Soco TC Max",
     "volkswagen-id-buzz-2024":      "Volkswagen ID. Buzz",
     "mercedes-esprinter-2024":      "Mercedes-Benz eSprinter",
     "ford-e-transit-2024":          "Ford E-Transit",
     "byd-t3-2024":                  "BYD T3",
     "rivian-edv700-2024":           "Rivian EDV",
-    "byd-k9-2024":                  "BYD eBus-12",
-    "yutong-e12-2024":              "Yutong",
-    "proterra-catalyst-e2-2024":    "Proterra",
+    "byd-k9-2024":                  "BYD K9",
+    "yutong-e12-2024":              "Yutong E12",
+    "proterra-catalyst-e2-2024":    "Proterra Catalyst",
     "new-flyer-xcelsior-xt-2024":   "New Flyer Xcelsior",
     "byd-c9-2024":                  "BYD C9",
     "kia-ev9-2024":                 "Kia EV9",
@@ -100,9 +99,18 @@ ARTICLE_MAP = {
     "nissan-leaf-2024":             "Nissan Leaf",
     "polestar-4-2024":              "Polestar 4",
     "kia-ev5-2024":                 "Kia EV5",
-    "volvo-fl-electric-2024":       "Volvo Trucks",
-    "proterra-zx5-2024":            "Proterra",
+    "volvo-fl-electric-2024":       "Volvo FL",
+    "proterra-zx5-2024":            "Proterra ZX5",
     "fisker-pear-2025":             "Fisker PEAR",
+    # LLM-added vehicles (Round 3+)
+    "hyundai-ioniq-7-2024":         "Hyundai Ioniq 7",
+    "kia-ev7-2024":                 "Kia EV7",
+    "mazda-mx-30-2024":             "Mazda MX-30",
+    "honda-prologue-2024":          "Honda Prologue",
+    "nissan-z-ev-2024":             "Nissan Z",
+    "bmw-ix2-2024":                 "BMW iX2",
+    "volkswagen-id-2-2024":         "Volkswagen ID.2",
+    "leapmotor-c11-2024":           "Leapmotor C11",
 }
 
 VALID_TYPES = {"sedan", "suv", "truck", "sports", "motorcycle", "van", "bus", "commercial"}
@@ -123,9 +131,14 @@ def save_vehicles(data):
 # ── Wikipedia image fetching ───────────────────────────────────────────
 
 def fetch_image_by_article(article_title):
-    """Fetch main image via Wikipedia REST API (no search needed, very reliable)."""
+    """Fetch main image for a Wikipedia article title.
+
+    Tries two Wikipedia APIs in sequence:
+      1. REST summary endpoint (fast, returns thumbnail directly)
+      2. MediaWiki pageimages API (more reliable for articles where REST lacks thumbnail)
+    """
     import urllib.parse
-    slug = urllib.parse.quote(article_title.replace(" ", "_"), safe="")
+    slug = urllib.parse.quote(article_title.replace(" ", "_"), safe="-._~")
     try:
         resp = requests.get(
             f"{WIKIPEDIA_REST}/{slug}",
@@ -136,10 +149,26 @@ def fetch_image_by_article(article_title):
             data = resp.json()
             src = data.get("thumbnail", {}).get("source", "")
             if src:
-                # Upgrade thumbnail width from default (320) to 640
                 return re.sub(r"/\d+px-", "/640px-", src)
     except Exception:
         pass
+
+    # Fallback: MediaWiki pageimages API — works when REST summary lacks thumbnail
+    try:
+        resp2 = requests.get(WIKIPEDIA_API, params={
+            "action": "query", "titles": article_title,
+            "prop": "pageimages", "pithumbsize": 640,
+            "format": "json",
+        }, headers={"User-Agent": WIKIPEDIA_UA}, timeout=10)
+        if resp2.status_code == 200:
+            pages = resp2.json().get("query", {}).get("pages", {})
+            for page in pages.values():
+                src = page.get("thumbnail", {}).get("source", "")
+                if src:
+                    return re.sub(r"/\d+px-", "/640px-", src)
+    except Exception:
+        pass
+
     return ""
 
 
@@ -166,15 +195,8 @@ def fetch_image_by_search(make, model):
     return ""
 
 
-def search_commons_image(make, model):
-    """Last resort: search Wikimedia Commons file namespace directly.
-
-    Commons has millions of free-licensed photos including vehicles with no
-    Wikipedia article (new models, obscure brands, buses, motorcycles, etc.).
-    All results are CC/public-domain — free and open license guaranteed.
-    """
-    make_words = make.replace("-", " ").lower().split()
-    query = f"{make} {model}"
+def _commons_query(query, make_words):
+    """Run one Wikimedia Commons file-namespace search and return the best image URL."""
     try:
         resp = requests.get("https://commons.wikimedia.org/w/api.php", params={
             "action": "query",
@@ -193,10 +215,8 @@ def search_commons_image(make, model):
 
     def score(page):
         title = page.get("title", "").lower()
-        # Penalise SVGs, logos, icons, diagrams
-        if title.endswith(".svg") or any(w in title for w in ("logo", "icon", "map", "diagram", "flag")):
+        if title.endswith(".svg") or any(w in title for w in ("logo", "icon", "map", "diagram", "flag", "badge")):
             return 0
-        # Boost if make name appears in file title
         bonus = 2 if any(w in title for w in make_words) else 0
         return 1 + bonus
 
@@ -208,6 +228,28 @@ def search_commons_image(make, model):
         thumb = info.get("thumburl", "")
         if thumb:
             return thumb
+    return ""
+
+
+def search_commons_image(make, model):
+    """Last resort: search Wikimedia Commons file namespace directly.
+
+    Commons has millions of free-licensed photos including vehicles with no
+    Wikipedia article (new models, obscure brands, buses, motorcycles, etc.).
+    All results are CC/public-domain — free and open license guaranteed.
+    Tries multiple queries from specific to broad to maximise hit rate.
+    """
+    make_words = make.replace("-", " ").lower().split()
+    queries = [
+        f"{make} {model}",
+        f"{make} {model} electric",
+        f"{make} {model} EV",
+        make,                        # last resort: brand name only
+    ]
+    for q in queries:
+        url = _commons_query(q, make_words)
+        if url:
+            return url
     return ""
 
 
@@ -298,10 +340,9 @@ def extract_json(text):
 
 
 def call_openrouter(prompt):
-    """Call openai/gpt-oss-120b:free via OpenRouter."""
+    """Call openai/gpt-oss-120b:free via OpenRouter. Raises RuntimeError on failure."""
     if not OPENROUTER_API_KEY:
-        print("ERROR: OPENROUTER_API_KEY environment variable not set.")
-        sys.exit(1)
+        raise RuntimeError("OPENROUTER_API_KEY environment variable not set")
 
     headers = {
         "Authorization": f"Bearer {OPENROUTER_API_KEY}",
@@ -327,8 +368,7 @@ def call_openrouter(prompt):
                 content = resp.json()["choices"][0]["message"]["content"]
                 return extract_json(content)
             except (KeyError, IndexError, ValueError) as e:
-                print(f"  Failed to parse response: {e}")
-                sys.exit(1)
+                raise RuntimeError(f"Failed to parse LLM response: {e}")
 
         if resp.status_code == 429:
             wait = 10 * (attempt + 1)
@@ -336,11 +376,9 @@ def call_openrouter(prompt):
             time.sleep(wait)
             continue
 
-        print(f"  API error ({resp.status_code}): {resp.text[:200]}")
-        sys.exit(1)
+        raise RuntimeError(f"API error ({resp.status_code}): {resp.text[:200]}")
 
-    print("Request failed after 3 attempts.")
-    sys.exit(1)
+    raise RuntimeError("Request failed after 3 attempts")
 
 
 # ── Validation ─────────────────────────────────────────────────────────
@@ -424,31 +462,35 @@ def main():
 
     print(f"Current database: {len(current_vehicles)} vehicles")
 
-    # Step 1: ask the LLM for new vehicles
-    print(f"Calling OpenRouter API (model: {MODEL})…")
-    prompt = build_prompt(current_vehicles)
-    result = call_openrouter(prompt)
-
-    new_vehicles = result.get("new_vehicles", [])
-    print(f"Model returned {len(new_vehicles)} candidate vehicle(s)")
-
+    # Step 1: ask the LLM for new vehicles (non-fatal — image fill always runs)
     added = 0
-    for vehicle in new_vehicles:
-        vid = vehicle.get("id", "unknown")
-        if vid in existing_ids:
-            print(f"  Skip (duplicate): {vid}")
-            continue
-        ok, reason = validate_vehicle(vehicle)
-        if not ok:
-            print(f"  Skip (invalid — {reason}): {vid}")
-            continue
-        vehicle.setdefault("image_url", "")
-        current_vehicles.append(vehicle)
-        existing_ids.add(vid)
-        added += 1
-        print(f"  Added: {vehicle['year']} {vehicle['make']} {vehicle['model']}")
+    if OPENROUTER_API_KEY:
+        try:
+            print(f"Calling OpenRouter API (model: {MODEL})…")
+            prompt = build_prompt(current_vehicles)
+            result = call_openrouter(prompt)
+            new_vehicles = result.get("new_vehicles", [])
+            print(f"Model returned {len(new_vehicles)} candidate vehicle(s)")
+            for vehicle in new_vehicles:
+                vid = vehicle.get("id", "unknown")
+                if vid in existing_ids:
+                    print(f"  Skip (duplicate): {vid}")
+                    continue
+                ok, reason = validate_vehicle(vehicle)
+                if not ok:
+                    print(f"  Skip (invalid — {reason}): {vid}")
+                    continue
+                vehicle.setdefault("image_url", "")
+                current_vehicles.append(vehicle)
+                existing_ids.add(vid)
+                added += 1
+                print(f"  Added: {vehicle['year']} {vehicle['make']} {vehicle['model']}")
+        except RuntimeError as e:
+            print(f"  LLM call failed ({e}) — skipping new vehicle discovery.")
+    else:
+        print("No OPENROUTER_API_KEY — skipping LLM call.")
 
-    # Step 2: fill in missing images from Wikipedia
+    # Step 2: fill in missing images from Wikipedia (always runs)
     print()
     images_filled = populate_images(current_vehicles)
 
