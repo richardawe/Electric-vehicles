@@ -156,9 +156,14 @@ function createCard(v) {
   card.setAttribute('tabindex', '0');
   card.setAttribute('aria-label', `${v.year} ${v.make} ${v.model}`);
 
+  const hasImg = !!v.image_url;
   card.innerHTML = `
     <div class="card-image" data-type="${v.type}">
-      ${imageHTML(v, 'card')}
+      ${hasImg ? `<img src="${escAttr(v.image_url)}" alt="${escAttr(v.year + ' ' + v.make + ' ' + v.model)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />` : ''}
+      <div class="card-image-placeholder" style="${hasImg ? 'display:none' : 'display:flex'}">
+        <div class="placeholder-icon">${TYPE_ICONS[v.type] || '🚗'}</div>
+        <div class="placeholder-name">${escHtml(v.make)} ${escHtml(v.model)}</div>
+      </div>
       <span class="card-type-badge">${TYPE_ICONS[v.type] || '🚗'} ${v.type}</span>
       <span class="card-country-badge">${countryFlag(v.country)} ${v.country}</span>
     </div>
@@ -197,30 +202,6 @@ function createCard(v) {
   return card;
 }
 
-function imageHTML(v, context) {
-  const cls = context === 'modal' ? 'modal-image-placeholder card-image-placeholder' : 'card-image-placeholder';
-  if (v.image_url) {
-    const img = document.createElement('img');
-    img.src = v.image_url;
-    img.alt = `${v.year} ${v.make} ${v.model}`;
-    img.loading = 'lazy';
-    img.onerror = function () {
-      this.parentElement.innerHTML = placeholderHTML(v, cls);
-    };
-    // Build with string for innerHTML context
-    return `<img src="${escAttr(v.image_url)}" alt="${escAttr(v.year + ' ' + v.make + ' ' + v.model)}" loading="lazy" onerror="this.parentElement.innerHTML='${escAttr(placeholderHTML(v, cls))}'" />`;
-  }
-  return placeholderHTML(v, cls);
-}
-
-function placeholderHTML(v, cls = 'card-image-placeholder') {
-  const icon = TYPE_ICONS[v.type] || '🚗';
-  return `<div class="${cls}">
-    <div class="placeholder-icon">${icon}</div>
-    <div class="placeholder-name">${escHtml(v.make)} ${escHtml(v.model)}</div>
-  </div>`;
-}
-
 function priceHTML(price) {
   if (price == null) return '<span class="card-price na">Price TBD</span>';
   return `<span class="card-price">$${price.toLocaleString('en-US')}</span>`;
@@ -235,8 +216,17 @@ function openModal(v) {
 
   // Image
   modalImg.setAttribute('data-type', v.type);
-  const existingClose = modalImg.querySelector('.modal-close');
-  modalImg.innerHTML = imageHTML(v, 'modal');
+  const hasImg = !!v.image_url;
+  modalImg.innerHTML = hasImg
+    ? `<img src="${escAttr(v.image_url)}" alt="${escAttr(v.year + ' ' + v.make + ' ' + v.model)}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+       <div class="card-image-placeholder" style="display:none;height:240px">
+         <div class="placeholder-icon">${TYPE_ICONS[v.type] || '🚗'}</div>
+         <div class="placeholder-name">${escHtml(v.make)} ${escHtml(v.model)}</div>
+       </div>`
+    : `<div class="card-image-placeholder" style="display:flex;height:240px">
+         <div class="placeholder-icon">${TYPE_ICONS[v.type] || '🚗'}</div>
+         <div class="placeholder-name">${escHtml(v.make)} ${escHtml(v.model)}</div>
+       </div>`;
   const newClose = document.createElement('button');
   newClose.className = 'modal-close';
   newClose.id = 'modal-close';
