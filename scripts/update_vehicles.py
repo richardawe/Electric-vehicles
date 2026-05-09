@@ -83,6 +83,26 @@ ARTICLE_MAP = {
     "mercedes-eqe-2024":            "Mercedes-Benz EQE",
     "byd-dolphin-2024":             "BYD Dolphin",
     "renault-megane-e-tech-2024":   "Renault Mégane E-Tech",
+    # Round 2 additions
+    "bmw-i5-2024":                  "BMW i5",
+    "mercedes-eqb-2024":            "Mercedes-Benz EQB",
+    "volkswagen-id7-2024":          "Volkswagen ID.7",
+    "ford-explorer-ev-2024":        "Ford Explorer EV",
+    "tesla-semi-2024":              "Tesla Semi",
+    "rivian-r2-2024":               "Rivian R2",
+    "byd-seal-2024":                "BYD Seal",
+    "lucid-gravity-2024":           "Lucid Gravity",
+    "kia-ev8-2024":                 "Kia EV8",
+    "bmw-i7-2024":                  "BMW i7",
+    "mercedes-eqe-suv-2024":        "Mercedes-Benz EQE SUV",
+    "volkswagen-id5-2024":          "Volkswagen ID.5",
+    "honda-e-2024":                 "Honda e",
+    "nissan-leaf-2024":             "Nissan Leaf",
+    "polestar-4-2024":              "Polestar 4",
+    "kia-ev5-2024":                 "Kia EV5",
+    "volvo-fl-electric-2024":       "Volvo Trucks",
+    "proterra-zx5-2024":            "Proterra",
+    "fisker-pear-2025":             "Fisker PEAR",
 }
 
 VALID_TYPES = {"sedan", "suv", "truck", "sports", "motorcycle", "van", "bus", "commercial"}
