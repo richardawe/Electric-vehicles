@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Daily EV database updater using openai/gpt-oss-120b:free via OpenRouter."""
+"""Daily EV database updater using openai/gpt-oss-120b:free via OpenRouter.
+
+Also fetches real car photos from Wikipedia for any vehicle with a blank image_url.
+"""
 
 import json
 import os
@@ -14,9 +17,13 @@ BASE_URL = "https://openrouter.ai/api/v1/chat/completions"
 VEHICLES_FILE = os.path.join(os.path.dirname(__file__), "..", "data", "vehicles.json")
 
 MODEL = "openai/gpt-oss-120b:free"
+WIKIPEDIA_API = "https://en.wikipedia.org/w/api.php"
+WIKIPEDIA_UA = "EVShowcase/1.0 (github.com/richardawe/electric-vehicles)"
 
 VALID_TYPES = {"sedan", "suv", "truck", "sports", "motorcycle", "van", "bus", "commercial"}
 
+
+# ── File I/O ───────────────────────────────────────────────────────────
 
 def load_vehicles():
     with open(VEHICLES_FILE, "r", encoding="utf-8") as f:
@@ -28,21 +35,93 @@ def save_vehicles(data):
         json.dump(data, f, indent=2, ensure_ascii=False)
 
 
+# ── Wikipedia image fetching ───────────────────────────────────────────
+
+def wikipedia_image_for_title(title):
+    """Return the thumbnail URL for a Wikipedia article title, or ''."""
+    try:
+        resp = requests.get(WIKIPEDIA_API, params={
+            "action": "query",
+            "titles": title,
+            "prop": "pageimages",
+            "pithumbsize": 640,
+            "piprop": "thumbnail",
+            "format": "json",
+        }, headers={"User-Agent": WIKIPEDIA_UA}, timeout=10)
+        pages = resp.json()["query"]["pages"]
+        for page in pages.values():
+            src = page.get("thumbnail", {}).get("source", "")
+            if src:
+                return src
+    except Exception:
+        pass
+    return ""
+
+
+def fetch_wikipedia_image(make, model):
+    """Search Wikipedia for a vehicle and return its main photo URL."""
+    try:
+        resp = requests.get(WIKIPEDIA_API, params={
+            "action": "query",
+            "list": "search",
+            "srsearch": f"{make} {model} electric vehicle",
+            "srlimit": 3,
+            "format": "json",
+        }, headers={"User-Agent": WIKIPEDIA_UA}, timeout=10)
+        results = resp.json()["query"]["search"]
+    except Exception:
+        return ""
+
+    for result in results[:3]:
+        title = result["title"]
+        title_lower = title.lower()
+        # Require at least one of make/model to appear in the article title
+        if make.lower() not in title_lower and model.lower() not in title_lower:
+            continue
+        url = wikipedia_image_for_title(title)
+        if url:
+            return url
+
+    return ""
+
+
+def populate_images(vehicles):
+    """Fill in image_url for every vehicle that currently has none."""
+    missing = [v for v in vehicles if not v.get("image_url")]
+    if not missing:
+        print("All vehicles already have images.")
+        return 0
+
+    print(f"Fetching Wikipedia images for {len(missing)} vehicle(s)…")
+    filled = 0
+    for v in missing:
+        url = fetch_wikipedia_image(v["make"], v["model"])
+        if url:
+            v["image_url"] = url
+            filled += 1
+            print(f"  ✓ {v['make']} {v['model']}")
+        else:
+            print(f"  – {v['make']} {v['model']} (no image found)")
+        time.sleep(0.5)  # respectful rate-limiting for Wikipedia
+
+    print(f"Images filled: {filled}/{len(missing)}")
+    return filled
+
+
+# ── OpenRouter LLM call ────────────────────────────────────────────────
+
 def extract_json(text):
-    """Return the first JSON object found in text, even if surrounded by prose."""
-    # Try direct parse first
+    """Return the first JSON object found in text, even if wrapped in prose."""
     try:
         return json.loads(text)
     except json.JSONDecodeError:
         pass
-    # Extract from markdown code fence
     fence = re.search(r"```(?:json)?\s*(\{.*?\})\s*```", text, re.DOTALL)
     if fence:
         try:
             return json.loads(fence.group(1))
         except json.JSONDecodeError:
             pass
-    # Find outermost {...}
     start = text.find("{")
     if start != -1:
         depth = 0
@@ -53,7 +132,7 @@ def extract_json(text):
                 depth -= 1
                 if depth == 0:
                     try:
-                        return json.loads(text[start : i + 1])
+                        return json.loads(text[start: i + 1])
                     except json.JSONDecodeError:
                         break
     raise ValueError("No valid JSON object found in response")
@@ -105,6 +184,8 @@ def call_openrouter(prompt):
     sys.exit(1)
 
 
+# ── Validation ─────────────────────────────────────────────────────────
+
 def validate_vehicle(v):
     required = ["id", "make", "model", "year", "type", "range_mi", "battery_kwh"]
     for field in required:
@@ -120,6 +201,8 @@ def validate_vehicle(v):
         return False, "invalid year"
     return True, "ok"
 
+
+# ── Prompt ─────────────────────────────────────────────────────────────
 
 def build_prompt(current_vehicles):
     summary = "\n".join(
@@ -165,12 +248,14 @@ Return ONLY a valid JSON object — no markdown, no explanation, just the JSON:
 Rules:
 - Only include vehicles with confirmed, publicly available specifications
 - Use null for any spec that is genuinely unknown
-- Set image_url to "" (empty string)
+- Set image_url to "" (empty string) — images are fetched separately
 - IDs must be lowercase with hyphens, e.g. "byd-seagull-2024"
 - Do not duplicate any vehicle already listed above
 - Return "new_vehicles": [] if no new vehicles can be reliably added
 """
 
+
+# ── Main ───────────────────────────────────────────────────────────────
 
 def main():
     print(f"Loading vehicles from {VEHICLES_FILE}")
@@ -179,8 +264,9 @@ def main():
     existing_ids = {v["id"] for v in current_vehicles}
 
     print(f"Current database: {len(current_vehicles)} vehicles")
-    print(f"Calling OpenRouter API (model: {MODEL})…")
 
+    # Step 1: ask the LLM for new vehicles
+    print(f"Calling OpenRouter API (model: {MODEL})…")
     prompt = build_prompt(current_vehicles)
     result = call_openrouter(prompt)
 
@@ -190,28 +276,30 @@ def main():
     added = 0
     for vehicle in new_vehicles:
         vid = vehicle.get("id", "unknown")
-
         if vid in existing_ids:
             print(f"  Skip (duplicate): {vid}")
             continue
-
         ok, reason = validate_vehicle(vehicle)
         if not ok:
             print(f"  Skip (invalid — {reason}): {vid}")
             continue
-
         vehicle.setdefault("image_url", "")
         current_vehicles.append(vehicle)
         existing_ids.add(vid)
         added += 1
         print(f"  Added: {vehicle['year']} {vehicle['make']} {vehicle['model']}")
 
+    # Step 2: fill in missing images from Wikipedia
+    print()
+    images_filled = populate_images(current_vehicles)
+
+    # Step 3: save
     data["vehicles"] = current_vehicles
     data["last_updated"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     data["vehicle_count"] = len(current_vehicles)
-
     save_vehicles(data)
-    print(f"\nDone. Added {added} vehicle(s). Total: {len(current_vehicles)}")
+
+    print(f"\nDone. Added {added} vehicle(s), filled {images_filled} image(s). Total: {len(current_vehicles)}")
 
 
 if __name__ == "__main__":
