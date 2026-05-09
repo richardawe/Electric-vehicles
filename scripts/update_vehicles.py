@@ -111,6 +111,22 @@ ARTICLE_MAP = {
     "bmw-ix2-2024":                 "BMW iX2",
     "volkswagen-id-2-2024":         "Volkswagen ID.2",
     "leapmotor-c11-2024":           "Leapmotor C11",
+    # LLM-added vehicles (Round 4+)
+    "skoda-enyaq-iv-2024":          "Škoda Enyaq",
+    "peugeot-e-208-2024":           "Peugeot e-208",
+    "opel-corsa-e-2024":            "Opel Corsa-e",
+    "kia-ev6-standard-2024":        "Kia EV6",
+    "porsche-macan-ev-2024":        "Porsche Macan (electric)",
+    "genesis-gv60-2024":            "Genesis GV60",
+    "genesis-g80-electrified-2024": "Genesis G80",
+    "subaru-solterra-2024":         "Subaru Solterra",
+    "freightliner-ecascadia-2024":  "Freightliner eCascadia",
+    "volvo-vnr-electric-2024":      "Volvo VNR Electric",
+    "energica-eva-ribelle-2024":    "Energica Eva Ribelle",
+    "peugeot-e-2008-2024":          "Peugeot e-2008",
+    "renault-zoe-2024":             "Renault Zoé",
+    "nova-bus-lfse-2024":           "Nova Bus LFSe",
+    "ford-f-150-lightning-2025":    "Ford F-150 Lightning",
 }
 
 VALID_TYPES = {"sedan", "suv", "truck", "sports", "motorcycle", "van", "bus", "commercial"}
