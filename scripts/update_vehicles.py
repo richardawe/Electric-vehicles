@@ -1,9 +1,5 @@
 #!/usr/bin/env python3
-"""Daily EV database updater using OpenRouter free LLMs.
-
-Tries each model in MODELS in order. Skips a model on 404 (not available)
-or persistent rate-limits, and moves on to the next one.
-"""
+"""Daily EV database updater using openai/gpt-oss-120b:free via OpenRouter."""
 
 import json
 import os
@@ -17,15 +13,7 @@ OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY", "")
 BASE_URL = "https://openrouter.ai/api/v1/chat/completions"
 VEHICLES_FILE = os.path.join(os.path.dirname(__file__), "..", "data", "vehicles.json")
 
-# Free models tried in priority order. On 404 or sustained rate-limit the
-# script moves to the next one automatically.
-MODELS = [
-    "deepseek/deepseek-r1:free",
-    "meta-llama/llama-4-scout:free",
-    "qwen/qwen3-235b-a22b:free",
-    "mistralai/mistral-small-3.1-24b-instruct:free",
-    "google/gemma-3-12b-it:free",
-]
+MODEL = "openai/gpt-oss-120b:free"
 
 VALID_TYPES = {"sedan", "suv", "truck", "sports", "motorcycle", "van", "bus", "commercial"}
 
@@ -71,8 +59,12 @@ def extract_json(text):
     raise ValueError("No valid JSON object found in response")
 
 
-def call_model(prompt, model):
-    """Call one model. Returns parsed dict, or raises RuntimeError with reason."""
+def call_openrouter(prompt):
+    """Call openai/gpt-oss-120b:free via OpenRouter."""
+    if not OPENROUTER_API_KEY:
+        print("ERROR: OPENROUTER_API_KEY environment variable not set.")
+        sys.exit(1)
+
     headers = {
         "Authorization": f"Bearer {OPENROUTER_API_KEY}",
         "Content-Type": "application/json",
@@ -80,7 +72,7 @@ def call_model(prompt, model):
         "X-Title": "EV Showcase Updater",
     }
     payload = {
-        "model": model,
+        "model": MODEL,
         "messages": [{"role": "user", "content": prompt}],
         "temperature": 0.1,
     }
@@ -89,7 +81,7 @@ def call_model(prompt, model):
         try:
             resp = requests.post(BASE_URL, headers=headers, json=payload, timeout=120)
         except requests.exceptions.Timeout:
-            print(f"    Timeout on attempt {attempt + 1}/3")
+            print(f"  Timeout (attempt {attempt + 1}/3)")
             continue
 
         if resp.status_code == 200:
@@ -97,48 +89,19 @@ def call_model(prompt, model):
                 content = resp.json()["choices"][0]["message"]["content"]
                 return extract_json(content)
             except (KeyError, IndexError, ValueError) as e:
-                raise RuntimeError(f"bad-response: {e}")
-
-        if resp.status_code == 404:
-            raise RuntimeError("not-available")
+                print(f"  Failed to parse response: {e}")
+                sys.exit(1)
 
         if resp.status_code == 429:
-            if attempt < 2:
-                wait = 10 * (attempt + 1)
-                print(f"    Rate limited — waiting {wait}s…")
-                time.sleep(wait)
-            else:
-                raise RuntimeError("rate-limited")
+            wait = 10 * (attempt + 1)
+            print(f"  Rate limited — waiting {wait}s…")
+            time.sleep(wait)
             continue
 
-        # Any other HTTP error — don't retry
-        raise RuntimeError(f"http-{resp.status_code}: {resp.text[:120]}")
-
-    raise RuntimeError("timeout-exhausted")
-
-
-def call_openrouter(prompt):
-    """Try each model in MODELS until one succeeds."""
-    if not OPENROUTER_API_KEY:
-        print("ERROR: OPENROUTER_API_KEY environment variable not set.")
+        print(f"  API error ({resp.status_code}): {resp.text[:200]}")
         sys.exit(1)
 
-    for model in MODELS:
-        print(f"  Trying model: {model}")
-        try:
-            result = call_model(prompt, model)
-            print(f"  Success with: {model}")
-            return result
-        except RuntimeError as e:
-            reason = str(e)
-            if reason == "not-available":
-                print(f"  Model not available (404) — skipping")
-            elif reason == "rate-limited":
-                print(f"  Persistent rate limit — skipping")
-            else:
-                print(f"  Failed ({reason}) — skipping")
-
-    print("All models exhausted without a successful response.")
+    print("Request failed after 3 attempts.")
     sys.exit(1)
 
 
@@ -216,7 +179,7 @@ def main():
     existing_ids = {v["id"] for v in current_vehicles}
 
     print(f"Current database: {len(current_vehicles)} vehicles")
-    print("Calling OpenRouter API…")
+    print(f"Calling OpenRouter API (model: {MODEL})…")
 
     prompt = build_prompt(current_vehicles)
     result = call_openrouter(prompt)
