@@ -1,0 +1,91 @@
+name: Daily EV Update & Deploy
+
+on:
+  schedule:
+    - cron: '0 6 * * *'   # 6am UTC every day
+  workflow_dispatch:        # Allow manual runs from GitHub Actions tab
+  push:
+    branches:
+      - main
+      - 'claude/**'
+
+permissions:
+  contents: write   # commit updated vehicles.json
+  pages: write      # deploy to GitHub Pages
+  id-token: write   # OIDC token for Pages deployment
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  # ── Job 1: update vehicles.json ──────────────────────────────────────
+  update-data:
+    name: Update EV data
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run EV updater
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: python scripts/update_vehicles.py
+
+      - name: Commit updated data
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/vehicles.json
+          if git diff --staged --quiet; then
+            echo "No new vehicles found — database up to date."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            ADDED=$(git diff --staged --stat | tail -1)
+            git commit -m "chore: update EV database $(date -u +%Y-%m-%d) [skip ci]"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "Committed: $ADDED"
+          fi
+
+  # ── Job 2: deploy to GitHub Pages ────────────────────────────────────
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: update-data
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout (includes latest vehicles.json)
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

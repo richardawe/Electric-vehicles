@@ -1,0 +1,189 @@
+#!/usr/bin/env python3
+"""Daily EV database updater using OpenRouter free LLM (deepseek/deepseek-chat-v3-0324:free)."""
+
+import json
+import os
+import sys
+import time
+import requests
+from datetime import datetime, timezone
+
+OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY", "")
+MODEL = "deepseek/deepseek-chat-v3-0324:free"
+FALLBACK_MODEL = "meta-llama/llama-3.3-70b-instruct:free"
+BASE_URL = "https://openrouter.ai/api/v1/chat/completions"
+VEHICLES_FILE = os.path.join(os.path.dirname(__file__), "..", "data", "vehicles.json")
+
+VALID_TYPES = {"sedan", "suv", "truck", "sports", "motorcycle", "van", "bus", "commercial"}
+
+
+def load_vehicles():
+    with open(VEHICLES_FILE, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def save_vehicles(data):
+    with open(VEHICLES_FILE, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+
+
+def call_openrouter(prompt, model=MODEL, retry=True):
+    if not OPENROUTER_API_KEY:
+        print("ERROR: OPENROUTER_API_KEY environment variable not set.")
+        sys.exit(1)
+
+    headers = {
+        "Authorization": f"Bearer {OPENROUTER_API_KEY}",
+        "Content-Type": "application/json",
+        "HTTP-Referer": "https://github.com/richardawe/electric-vehicles",
+        "X-Title": "EV Showcase Updater",
+    }
+    payload = {
+        "model": model,
+        "messages": [{"role": "user", "content": prompt}],
+        "temperature": 0.1,
+        "response_format": {"type": "json_object"},
+    }
+
+    for attempt in range(3):
+        try:
+            resp = requests.post(BASE_URL, headers=headers, json=payload, timeout=90)
+            if resp.status_code == 200:
+                data = resp.json()
+                content = data["choices"][0]["message"]["content"]
+                return json.loads(content)
+            elif resp.status_code == 429:
+                wait = 2 ** attempt * 5
+                print(f"Rate limited. Waiting {wait}s before retry...")
+                time.sleep(wait)
+            else:
+                print(f"API error ({resp.status_code}): {resp.text[:200]}")
+                if retry and model == MODEL:
+                    print(f"Retrying with fallback model: {FALLBACK_MODEL}")
+                    return call_openrouter(prompt, model=FALLBACK_MODEL, retry=False)
+                sys.exit(1)
+        except requests.exceptions.Timeout:
+            print(f"Request timed out (attempt {attempt + 1}/3)")
+        except json.JSONDecodeError as e:
+            print(f"Failed to parse JSON response: {e}")
+            if retry and model == MODEL:
+                return call_openrouter(prompt, model=FALLBACK_MODEL, retry=False)
+            sys.exit(1)
+
+    print("All retry attempts exhausted.")
+    sys.exit(1)
+
+
+def validate_vehicle(v):
+    required = ["id", "make", "model", "year", "type", "range_mi", "battery_kwh"]
+    for field in required:
+        if field not in v or v[field] is None:
+            return False, f"missing required field: {field}"
+    if v["type"] not in VALID_TYPES:
+        return False, f"invalid type: {v['type']}"
+    if not isinstance(v["range_mi"], (int, float)) or v["range_mi"] <= 0:
+        return False, "invalid range_mi"
+    if not isinstance(v["battery_kwh"], (int, float)) or v["battery_kwh"] <= 0:
+        return False, "invalid battery_kwh"
+    if not isinstance(v["year"], int) or not (2010 <= v["year"] <= 2030):
+        return False, "invalid year"
+    return True, "ok"
+
+
+def build_prompt(current_vehicles):
+    summary = "\n".join(
+        f"- {v['year']} {v['make']} {v['model']} ({v.get('variant', '')}) [{v['type']}]"
+        for v in sorted(current_vehicles, key=lambda x: (x["make"], x["model"]))
+    )
+
+    return f"""You are an electric vehicle expert with up-to-date knowledge of all commercially available and announced EVs worldwide.
+
+The current EV database has {len(current_vehicles)} vehicles listed below:
+
+{summary}
+
+Your task: Identify up to 10 electric vehicles NOT already in the database. Include vehicles from any country (USA, China, Europe, South Korea, Japan, etc.) and all categories: sedans, SUVs, trucks, sports cars, motorcycles, vans, buses, commercial vehicles.
+
+Return ONLY a valid JSON object with this exact structure — no extra text:
+{{
+  "new_vehicles": [
+    {{
+      "id": "make-model-year",
+      "make": "Manufacturer",
+      "model": "Model Name",
+      "year": 2024,
+      "type": "sedan|suv|truck|sports|motorcycle|van|bus|commercial",
+      "variant": "Specific trim or null",
+      "range_mi": 300,
+      "range_km": 483,
+      "battery_kwh": 82.0,
+      "acceleration_0_60_sec": 4.2,
+      "top_speed_mph": 145,
+      "top_speed_kmh": 233,
+      "dc_fast_charge_kw": 250,
+      "charge_time_10_80_min": 25,
+      "price_usd": 42990,
+      "country": "USA",
+      "global_availability": true,
+      "image_url": "",
+      "description": "One or two sentence description of this vehicle."
+    }}
+  ]
+}}
+
+Rules:
+- Only include vehicles with confirmed, publicly available specifications
+- Use null for any spec that is genuinely unknown
+- Set image_url to "" (empty string)
+- IDs must be lowercase with hyphens, e.g. "byd-seagull-2024"
+- Do not duplicate any vehicle already in the database above
+- Return an empty array if no new vehicles can be reliably added
+"""
+
+
+def main():
+    print(f"Loading vehicles from {VEHICLES_FILE}")
+    data = load_vehicles()
+    current_vehicles = data.get("vehicles", [])
+    existing_ids = {v["id"] for v in current_vehicles}
+
+    print(f"Current database: {len(current_vehicles)} vehicles")
+    print(f"Calling OpenRouter API (model: {MODEL})")
+
+    prompt = build_prompt(current_vehicles)
+    result = call_openrouter(prompt)
+
+    new_vehicles = result.get("new_vehicles", [])
+    print(f"Model returned {len(new_vehicles)} candidate vehicle(s)")
+
+    added = 0
+    for vehicle in new_vehicles:
+        vid = vehicle.get("id", "unknown")
+
+        if vid in existing_ids:
+            print(f"  Skip (duplicate): {vid}")
+            continue
+
+        ok, reason = validate_vehicle(vehicle)
+        if not ok:
+            print(f"  Skip (invalid — {reason}): {vid}")
+            continue
+
+        # Ensure image_url exists
+        vehicle.setdefault("image_url", "")
+
+        current_vehicles.append(vehicle)
+        existing_ids.add(vid)
+        added += 1
+        print(f"  Added: {vehicle['year']} {vehicle['make']} {vehicle['model']}")
+
+    data["vehicles"] = current_vehicles
+    data["last_updated"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    data["vehicle_count"] = len(current_vehicles)
+
+    save_vehicles(data)
+    print(f"\nDone. Added {added} vehicle(s). Total: {len(current_vehicles)}")
+
+
+if __name__ == "__main__":
+    main()

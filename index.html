@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EV Showcase — Electric Vehicles of the World</title>
+  <meta name="description" content="A comprehensive, daily-updated showcase of electric vehicles from around the world. Browse specs, range, battery size, and pricing." />
+  <meta property="og:title" content="EV Showcase" />
+  <meta property="og:description" content="Every electric vehicle in the world — specs, range, and more. Updated daily by AI." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='28'>⚡</text></svg>" />
+</head>
+<body>
+
+  <!-- ── Header ────────────────────────────────────────────── -->
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <div class="logo-icon">⚡</div>
+        <div class="logo-text">EV<span>Showcase</span></div>
+      </div>
+
+      <div class="header-search">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input type="text" id="search-input" placeholder="Search make, model, country…" autocomplete="off" />
+      </div>
+
+      <div class="header-stats">
+        <div class="stat-badge"><strong id="stat-count">—</strong> vehicles</div>
+        <div class="stat-badge">Updated <strong id="stat-updated">—</strong></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Hero ──────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-label">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      Updated daily by AI · Powered by OpenRouter
+    </div>
+    <h1>Every <em>Electric Vehicle</em><br />in the World</h1>
+    <p>Browse specs, range, battery size and pricing for EVs from every manufacturer — cars, trucks, motorcycles, buses, and more.</p>
+  </section>
+
+  <!-- ── Controls ──────────────────────────────────────────── -->
+  <div class="controls">
+    <div class="filter-group" id="filter-group">
+      <button class="filter-btn active" data-type="all">All</button>
+      <button class="filter-btn" data-type="sedan">Sedan</button>
+      <button class="filter-btn" data-type="suv">SUV</button>
+      <button class="filter-btn" data-type="truck">Truck</button>
+      <button class="filter-btn" data-type="sports">Sports</button>
+      <button class="filter-btn" data-type="motorcycle">Motorcycle</button>
+      <button class="filter-btn" data-type="van">Van</button>
+      <button class="filter-btn" data-type="bus">Bus</button>
+    </div>
+
+    <div class="sort-group">
+      <span class="sort-label">Sort by</span>
+      <select id="sort-select">
+        <option value="range">Range</option>
+        <option value="price_asc">Price (low)</option>
+        <option value="price_desc">Price (high)</option>
+        <option value="battery">Battery</option>
+        <option value="acceleration">0–60 mph</option>
+        <option value="year">Year</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- ── Results bar ────────────────────────────────────────── -->
+  <div class="results-bar">
+    <span id="results-text">Loading…</span>
+  </div>
+
+  <!-- ── Grid ──────────────────────────────────────────────── -->
+  <main class="grid-container">
+    <div class="vehicle-grid" id="vehicle-grid">
+      <div class="loading">
+        <div class="loading-spinner"></div>
+        <p>Loading vehicles…</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- ── Modal ─────────────────────────────────────────────── -->
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal" id="modal">
+      <div class="modal-image" id="modal-image">
+        <button class="modal-close" id="modal-close" aria-label="Close">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-make" id="modal-make"></div>
+        <div class="modal-title" id="modal-title"></div>
+        <div class="modal-subtitle" id="modal-subtitle"></div>
+        <div class="modal-description" id="modal-description"></div>
+        <div class="modal-specs-grid" id="modal-specs-grid"></div>
+        <div class="modal-meta" id="modal-meta"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Footer ────────────────────────────────────────────── -->
+  <footer>
+    <div>Built with the <a href="https://openrouter.ai" target="_blank" rel="noopener">OpenRouter</a> free tier · Deployed on <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a></div>
+    <div class="footer-updated">Database last refreshed: <span id="footer-updated">—</span></div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
