@@ -166,23 +166,77 @@ def fetch_image_by_search(make, model):
     return ""
 
 
+def search_commons_image(make, model):
+    """Last resort: search Wikimedia Commons file namespace directly.
+
+    Commons has millions of free-licensed photos including vehicles with no
+    Wikipedia article (new models, obscure brands, buses, motorcycles, etc.).
+    All results are CC/public-domain — free and open license guaranteed.
+    """
+    make_words = make.replace("-", " ").lower().split()
+    query = f"{make} {model}"
+    try:
+        resp = requests.get("https://commons.wikimedia.org/w/api.php", params={
+            "action": "query",
+            "generator": "search",
+            "gsrsearch": query,
+            "gsrnamespace": "6",   # File: namespace only
+            "gsrlimit": "10",
+            "prop": "imageinfo",
+            "iiprop": "url",
+            "iiurlwidth": "640",
+            "format": "json",
+        }, headers={"User-Agent": WIKIPEDIA_UA}, timeout=15)
+        pages = resp.json().get("query", {}).get("pages", {})
+    except Exception:
+        return ""
+
+    def score(page):
+        title = page.get("title", "").lower()
+        # Penalise SVGs, logos, icons, diagrams
+        if title.endswith(".svg") or any(w in title for w in ("logo", "icon", "map", "diagram", "flag")):
+            return 0
+        # Boost if make name appears in file title
+        bonus = 2 if any(w in title for w in make_words) else 0
+        return 1 + bonus
+
+    ranked = sorted(pages.values(), key=lambda p: (-score(p), p.get("index", 99)))
+    for page in ranked:
+        if score(page) == 0:
+            continue
+        info = page.get("imageinfo", [{}])[0]
+        thumb = info.get("thumburl", "")
+        if thumb:
+            return thumb
+    return ""
+
+
 def populate_images(vehicles):
-    """Fill image_url for every vehicle that currently has none."""
+    """Fill image_url for every vehicle that currently has none.
+
+    Fetch order (all sources are free/open Wikimedia license):
+      1. Wikipedia REST API via ARTICLE_MAP — guaranteed correct article
+      2. Wikipedia article search — for new vehicles not in the map
+      3. Wikimedia Commons file search — last resort (covers anything missing)
+    """
     missing = [v for v in vehicles if not v.get("image_url")]
     if not missing:
         print("All vehicles already have images.")
         return 0
 
-    print(f"Fetching Wikipedia images for {len(missing)} vehicle(s)…")
+    print(f"Fetching images for {len(missing)} vehicle(s)…")
     filled = 0
     for v in missing:
         vid = v["id"]
-        # 1. Try hardcoded article title (guaranteed correct article)
+        # 1. Known article title
         article = ARTICLE_MAP.get(vid)
         url = fetch_image_by_article(article) if article else ""
-        # 2. Fall back to search for new/unknown vehicles
+        # 2. Wikipedia search
         if not url:
             url = fetch_image_by_search(v["make"], v["model"])
+        # 3. Wikimedia Commons direct file search
+        if not url:
+            url = search_commons_image(v["make"], v["model"])
         if url:
             v["image_url"] = url
             filled += 1
