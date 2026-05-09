@@ -1,18 +1,31 @@
 #!/usr/bin/env python3
-"""Daily EV database updater using OpenRouter free LLM (deepseek/deepseek-chat-v3-0324:free)."""
+"""Daily EV database updater using OpenRouter free LLMs.
+
+Tries each model in MODELS in order. Skips a model on 404 (not available)
+or persistent rate-limits, and moves on to the next one.
+"""
 
 import json
 import os
+import re
 import sys
 import time
 import requests
 from datetime import datetime, timezone
 
 OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY", "")
-MODEL = "deepseek/deepseek-chat-v3-0324:free"
-FALLBACK_MODEL = "meta-llama/llama-3.3-70b-instruct:free"
 BASE_URL = "https://openrouter.ai/api/v1/chat/completions"
 VEHICLES_FILE = os.path.join(os.path.dirname(__file__), "..", "data", "vehicles.json")
+
+# Free models tried in priority order. On 404 or sustained rate-limit the
+# script moves to the next one automatically.
+MODELS = [
+    "deepseek/deepseek-r1:free",
+    "meta-llama/llama-4-scout:free",
+    "qwen/qwen3-235b-a22b:free",
+    "mistralai/mistral-small-3.1-24b-instruct:free",
+    "google/gemma-3-12b-it:free",
+]
 
 VALID_TYPES = {"sedan", "suv", "truck", "sports", "motorcycle", "van", "bus", "commercial"}
 
@@ -27,11 +40,39 @@ def save_vehicles(data):
         json.dump(data, f, indent=2, ensure_ascii=False)
 
 
-def call_openrouter(prompt, model=MODEL, retry=True):
-    if not OPENROUTER_API_KEY:
-        print("ERROR: OPENROUTER_API_KEY environment variable not set.")
-        sys.exit(1)
+def extract_json(text):
+    """Return the first JSON object found in text, even if surrounded by prose."""
+    # Try direct parse first
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        pass
+    # Extract from markdown code fence
+    fence = re.search(r"```(?:json)?\s*(\{.*?\})\s*```", text, re.DOTALL)
+    if fence:
+        try:
+            return json.loads(fence.group(1))
+        except json.JSONDecodeError:
+            pass
+    # Find outermost {...}
+    start = text.find("{")
+    if start != -1:
+        depth = 0
+        for i, ch in enumerate(text[start:], start):
+            if ch == "{":
+                depth += 1
+            elif ch == "}":
+                depth -= 1
+                if depth == 0:
+                    try:
+                        return json.loads(text[start : i + 1])
+                    except json.JSONDecodeError:
+                        break
+    raise ValueError("No valid JSON object found in response")
 
+
+def call_model(prompt, model):
+    """Call one model. Returns parsed dict, or raises RuntimeError with reason."""
     headers = {
         "Authorization": f"Bearer {OPENROUTER_API_KEY}",
         "Content-Type": "application/json",
@@ -42,35 +83,62 @@ def call_openrouter(prompt, model=MODEL, retry=True):
         "model": model,
         "messages": [{"role": "user", "content": prompt}],
         "temperature": 0.1,
-        "response_format": {"type": "json_object"},
     }
 
     for attempt in range(3):
         try:
-            resp = requests.post(BASE_URL, headers=headers, json=payload, timeout=90)
-            if resp.status_code == 200:
-                data = resp.json()
-                content = data["choices"][0]["message"]["content"]
-                return json.loads(content)
-            elif resp.status_code == 429:
-                wait = 2 ** attempt * 5
-                print(f"Rate limited. Waiting {wait}s before retry...")
+            resp = requests.post(BASE_URL, headers=headers, json=payload, timeout=120)
+        except requests.exceptions.Timeout:
+            print(f"    Timeout on attempt {attempt + 1}/3")
+            continue
+
+        if resp.status_code == 200:
+            try:
+                content = resp.json()["choices"][0]["message"]["content"]
+                return extract_json(content)
+            except (KeyError, IndexError, ValueError) as e:
+                raise RuntimeError(f"bad-response: {e}")
+
+        if resp.status_code == 404:
+            raise RuntimeError("not-available")
+
+        if resp.status_code == 429:
+            if attempt < 2:
+                wait = 10 * (attempt + 1)
+                print(f"    Rate limited — waiting {wait}s…")
                 time.sleep(wait)
             else:
-                print(f"API error ({resp.status_code}): {resp.text[:200]}")
-                if retry and model == MODEL:
-                    print(f"Retrying with fallback model: {FALLBACK_MODEL}")
-                    return call_openrouter(prompt, model=FALLBACK_MODEL, retry=False)
-                sys.exit(1)
-        except requests.exceptions.Timeout:
-            print(f"Request timed out (attempt {attempt + 1}/3)")
-        except json.JSONDecodeError as e:
-            print(f"Failed to parse JSON response: {e}")
-            if retry and model == MODEL:
-                return call_openrouter(prompt, model=FALLBACK_MODEL, retry=False)
-            sys.exit(1)
+                raise RuntimeError("rate-limited")
+            continue
 
-    print("All retry attempts exhausted.")
+        # Any other HTTP error — don't retry
+        raise RuntimeError(f"http-{resp.status_code}: {resp.text[:120]}")
+
+    raise RuntimeError("timeout-exhausted")
+
+
+def call_openrouter(prompt):
+    """Try each model in MODELS until one succeeds."""
+    if not OPENROUTER_API_KEY:
+        print("ERROR: OPENROUTER_API_KEY environment variable not set.")
+        sys.exit(1)
+
+    for model in MODELS:
+        print(f"  Trying model: {model}")
+        try:
+            result = call_model(prompt, model)
+            print(f"  Success with: {model}")
+            return result
+        except RuntimeError as e:
+            reason = str(e)
+            if reason == "not-available":
+                print(f"  Model not available (404) — skipping")
+            elif reason == "rate-limited":
+                print(f"  Persistent rate limit — skipping")
+            else:
+                print(f"  Failed ({reason}) — skipping")
+
+    print("All models exhausted without a successful response.")
     sys.exit(1)
 
 
@@ -104,7 +172,7 @@ The current EV database has {len(current_vehicles)} vehicles listed below:
 
 Your task: Identify up to 10 electric vehicles NOT already in the database. Include vehicles from any country (USA, China, Europe, South Korea, Japan, etc.) and all categories: sedans, SUVs, trucks, sports cars, motorcycles, vans, buses, commercial vehicles.
 
-Return ONLY a valid JSON object with this exact structure — no extra text:
+Return ONLY a valid JSON object — no markdown, no explanation, just the JSON:
 {{
   "new_vehicles": [
     {{
@@ -126,7 +194,7 @@ Return ONLY a valid JSON object with this exact structure — no extra text:
       "country": "USA",
       "global_availability": true,
       "image_url": "",
-      "description": "One or two sentence description of this vehicle."
+      "description": "One or two sentence description."
     }}
   ]
 }}
@@ -136,8 +204,8 @@ Rules:
 - Use null for any spec that is genuinely unknown
 - Set image_url to "" (empty string)
 - IDs must be lowercase with hyphens, e.g. "byd-seagull-2024"
-- Do not duplicate any vehicle already in the database above
-- Return an empty array if no new vehicles can be reliably added
+- Do not duplicate any vehicle already listed above
+- Return "new_vehicles": [] if no new vehicles can be reliably added
 """
 
 
@@ -148,7 +216,7 @@ def main():
     existing_ids = {v["id"] for v in current_vehicles}
 
     print(f"Current database: {len(current_vehicles)} vehicles")
-    print(f"Calling OpenRouter API (model: {MODEL})")
+    print("Calling OpenRouter API…")
 
     prompt = build_prompt(current_vehicles)
     result = call_openrouter(prompt)
@@ -169,9 +237,7 @@ def main():
             print(f"  Skip (invalid — {reason}): {vid}")
             continue
 
-        # Ensure image_url exists
         vehicle.setdefault("image_url", "")
-
         current_vehicles.append(vehicle)
         existing_ids.add(vid)
         added += 1
