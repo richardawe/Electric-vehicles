@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-12T08:51:32Z",
+  "last_updated": "2026-05-13T08:54:35Z",
   "version": "1.0",
   "vehicle_count": 150,
   "vehicles": [
@@ -2394,7 +2394,7 @@
       "price_usd": 27990,
       "country": "France",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/2024_Renault_Kangoo_in_Mineral_White%2C_front_left%2C_06-12-2025.jpg/640px-2024_Renault_Kangoo_in_Mineral_White%2C_front_left%2C_06-12-2025.jpg",
       "description": "A compact electric van for city deliveries, updated for 2024 with a larger 33 kWh battery."
     },
     {
@@ -2415,7 +2415,7 @@
       "price_usd": null,
       "country": "China",
       "global_availability": false,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/BYD_e2_facelift_003.jpg/640px-BYD_e2_facelift_003.jpg",
       "description": "BYD's 12‑meter city bus platform, offering up to 250 mi of range on a 150 kWh pack."
     },
     {
@@ -2436,7 +2436,7 @@
       "price_usd": 56990,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/BMW_iX3_NA5_IMG_5333.jpg/640px-BMW_iX3_NA5_IMG_5333.jpg",
       "description": "BMW's first fully electric SUV built on the X3 platform, offering a balance of range and premium interior."
     },
     {
@@ -2457,7 +2457,7 @@
       "price_usd": 69990,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Audi_Q6_e-tron_DSC_7829.jpg/640px-Audi_Q6_e-tron_DSC_7829.jpg",
       "description": "Audi's midsize electric SUV positioned between the Q4 e-tron and Q8 e-tron, featuring a spacious cabin and advanced driver aids."
     },
     {
@@ -2478,7 +2478,7 @@
       "price_usd": 74990,
       "country": "UK",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/2018_Jaguar_I-Pace_EV400_AWD_Front.jpg/640px-2018_Jaguar_I-Pace_EV400_AWD_Front.jpg",
       "description": "Jaguar's second‑generation electric SUV, refined styling and improved range over the original I‑Pace."
     },
     {
