@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-05-13T08:54:35Z",
+  "last_updated": "2026-05-14T08:47:36Z",
   "version": "1.0",
-  "vehicle_count": 150,
+  "vehicle_count": 152,
   "vehicles": [
     {
       "id": "tesla-model-3-2024",
@@ -2499,7 +2499,7 @@
       "price_usd": 239900,
       "country": "UK",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/2020_Lotus_Evija.jpg/640px-2020_Lotus_Evija.jpg",
       "description": "Lotus's hyper‑car with 2,000 hp from four electric motors, limited to 150 units worldwide."
     },
     {
@@ -2520,7 +2520,7 @@
       "price_usd": 119990,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/4_cilindros_y_museo_BMW%2C_M%C3%BAnich%2C_Alemania_2012-04-28%2C_DD_02.JPG/960px-4_cilindros_y_museo_BMW%2C_M%C3%BAnich%2C_Alemania_2012-04-28%2C_DD_02.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "description": "Luxury full‑size electric SUV derived from the i7 sedan, offering flagship comfort and technology."
     },
     {
@@ -2541,7 +2541,7 @@
       "price_usd": 42990,
       "country": "China",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/2023_BYD_e6_SNF7478L_front.jpg/640px-2023_BYD_e6_SNF7478L_front.jpg",
       "description": "Spacious electric MPV popular for ridesharing and family use, featuring a high‑capacity battery."
     },
     {
@@ -2562,7 +2562,7 @@
       "price_usd": 68990,
       "country": "China",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/NIO_House.jpg/640px-NIO_House.jpg",
       "description": "NIO's midsize electric SUV with swappable battery packs and advanced autonomous driving features."
     },
     {
@@ -3152,6 +3152,48 @@
       "global_availability": true,
       "image_url": "",
       "description": "A 12‑meter city bus with a high‑capacity battery, designed for dense urban routes."
+    },
+    {
+      "id": "lexus-rz-450e-2024",
+      "make": "Lexus",
+      "model": "RZ 450e",
+      "year": 2024,
+      "type": "suv",
+      "variant": "Standard",
+      "range_mi": 230,
+      "range_km": 370,
+      "battery_kwh": 71.4,
+      "acceleration_0_60_sec": 5.1,
+      "top_speed_mph": 124,
+      "top_speed_kmh": 200,
+      "dc_fast_charge_kw": 150,
+      "charge_time_10_80_min": 30,
+      "price_usd": 64990,
+      "country": "Japan",
+      "global_availability": true,
+      "image_url": "",
+      "description": "Lexus' first dedicated electric SUV, offering a premium interior and a 71 kWh battery."
+    },
+    {
+      "id": "cadillac-escalade-iq-2025",
+      "make": "Cadillac",
+      "model": "Escalade IQ",
+      "year": 2025,
+      "type": "suv",
+      "variant": "Base",
+      "range_mi": 300,
+      "range_km": 483,
+      "battery_kwh": 100,
+      "acceleration_0_60_sec": 4.9,
+      "top_speed_mph": 130,
+      "top_speed_kmh": 209,
+      "dc_fast_charge_kw": 250,
+      "charge_time_10_80_min": 25,
+      "price_usd": 119900,
+      "country": "USA",
+      "global_availability": true,
+      "image_url": "",
+      "description": "Cadillac's flagship electric luxury SUV, featuring a 100 kWh pack and advanced driver assistance."
     }
   ]
 }
