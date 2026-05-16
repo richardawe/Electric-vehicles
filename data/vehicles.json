@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-05-14T08:47:36Z",
+  "last_updated": "2026-05-16T08:13:41Z",
   "version": "1.0",
-  "vehicle_count": 152,
+  "vehicle_count": 157,
   "vehicles": [
     {
       "id": "tesla-model-3-2024",
@@ -2583,7 +2583,7 @@
       "price_usd": 64990,
       "country": "China",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/2022_XPeng_G9_%28front%29.jpg/640px-2022_XPeng_G9_%28front%29.jpg",
       "description": "Xpeng's flagship three‑row electric SUV, offering a long range and Xpilot autonomous system."
     },
     {
@@ -2604,7 +2604,7 @@
       "price_usd": 119990,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Mercedes-Benz_X296_1X7A1725.jpg/640px-Mercedes-Benz_X296_1X7A1725.jpg",
       "description": "Luxury electric SUV counterpart to the EQS sedan, featuring a lavish interior and advanced tech."
     },
     {
@@ -2625,7 +2625,7 @@
       "price_usd": 39990,
       "country": "Japan",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/%28CHN-Zhejiang%29_Private_FAW-Toyota_bZ3_%E6%B5%99ABT59A6_2024-12-15.jpg/640px-%28CHN-Zhejiang%29_Private_FAW-Toyota_bZ3_%E6%B5%99ABT59A6_2024-12-15.jpg",
       "description": "Toyota's compact electric SUV positioned below the bZ4X, aimed at mainstream markets worldwide."
     },
     {
@@ -2646,7 +2646,7 @@
       "price_usd": 48990,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/2021_Audi_Q4_e-tron_Sport_35.jpg/640px-2021_Audi_Q4_e-tron_Sport_35.jpg",
       "description": "Compact premium electric SUV with a spacious interior and optional all‑wheel drive."
     },
     {
@@ -2667,7 +2667,7 @@
       "price_usd": 59990,
       "country": "Sweden",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Polestar_5_Auto_Zuerich_2025_DSC_3198.jpg/640px-Polestar_5_Auto_Zuerich_2025_DSC_3198.jpg",
       "description": "Polestar’s first flagship sedan, combining Scandinavian design with high performance."
     },
     {
@@ -3194,6 +3194,111 @@
       "global_availability": true,
       "image_url": "",
       "description": "Cadillac's flagship electric luxury SUV, featuring a 100 kWh pack and advanced driver assistance."
+    },
+    {
+      "id": "faraday-future-ff-91-2024",
+      "make": "Faraday Future",
+      "model": "FF 91",
+      "year": 2024,
+      "type": "suv",
+      "variant": "Base",
+      "range_mi": 378,
+      "range_km": 608,
+      "battery_kwh": 140.0,
+      "acceleration_0_60_sec": 2.7,
+      "top_speed_mph": 155,
+      "top_speed_kmh": 250,
+      "dc_fast_charge_kw": 350,
+      "charge_time_10_80_min": 30,
+      "price_usd": 149900,
+      "country": "USA",
+      "global_availability": true,
+      "image_url": "",
+      "description": "A luxury electric SUV with a massive 140 kWh battery and ultra‑fast 350 kW charging."
+    },
+    {
+      "id": "li-auto-l8-2024",
+      "make": "Li Auto",
+      "model": "L8",
+      "year": 2024,
+      "type": "suv",
+      "variant": "Premium",
+      "range_mi": 360,
+      "range_km": 580,
+      "battery_kwh": 115.0,
+      "acceleration_0_60_sec": 4.5,
+      "top_speed_mph": 130,
+      "top_speed_kmh": 209,
+      "dc_fast_charge_kw": 250,
+      "charge_time_10_80_min": 28,
+      "price_usd": 62900,
+      "country": "China",
+      "global_availability": false,
+      "image_url": "",
+      "description": "Li Auto's flagship three‑row EV SUV, offering a long‑range battery and advanced driver assistance."
+    },
+    {
+      "id": "wm-motor-ex5-2024",
+      "make": "WM Motor",
+      "model": "EX5",
+      "year": 2024,
+      "type": "suv",
+      "variant": null,
+      "range_mi": 310,
+      "range_km": 500,
+      "battery_kwh": 78.0,
+      "acceleration_0_60_sec": 7.2,
+      "top_speed_mph": 112,
+      "top_speed_kmh": 180,
+      "dc_fast_charge_kw": 150,
+      "charge_time_10_80_min": 35,
+      "price_usd": 29900,
+      "country": "China",
+      "global_availability": false,
+      "image_url": "",
+      "description": "Compact electric SUV from WM Motor, positioned as an affordable alternative in the Chinese market."
+    },
+    {
+      "id": "audi-q5-e-tron-2024",
+      "make": "Audi",
+      "model": "Q5 e-tron",
+      "year": 2024,
+      "type": "suv",
+      "variant": "Premium",
+      "range_mi": 280,
+      "range_km": 450,
+      "battery_kwh": 95.0,
+      "acceleration_0_60_sec": 5.9,
+      "top_speed_mph": 124,
+      "top_speed_kmh": 200,
+      "dc_fast_charge_kw": 225,
+      "charge_time_10_80_min": 27,
+      "price_usd": 54990,
+      "country": "Germany",
+      "global_availability": true,
+      "image_url": "",
+      "description": "Audi's entry‑level electric SUV, combining familiar Q5 styling with a 95 kWh battery."
+    },
+    {
+      "id": "toyota-bz5-2025",
+      "make": "Toyota",
+      "model": "bZ5",
+      "year": 2025,
+      "type": "suv",
+      "variant": null,
+      "range_mi": 340,
+      "range_km": 547,
+      "battery_kwh": 100.0,
+      "acceleration_0_60_sec": 6.8,
+      "top_speed_mph": 115,
+      "top_speed_kmh": 185,
+      "dc_fast_charge_kw": 200,
+      "charge_time_10_80_min": 30,
+      "price_usd": 44990,
+      "country": "Japan",
+      "global_availability": true,
+      "image_url": "",
+      "description": "Toyota's next‑generation bZ series SUV, offering a 100 kWh pack and a spacious interior."
     }
   ]
 }
