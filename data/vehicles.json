@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-17T08:31:51Z",
+  "last_updated": "2026-05-18T10:20:00Z",
   "version": "1.0",
   "vehicle_count": 167,
   "vehicles": [
@@ -2835,7 +2835,7 @@
       "price_usd": 48990,
       "country": "Japan",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/2023_Nissan_Ariya_Advance_Front.jpg/640px-2023_Nissan_Ariya_Advance_Front.jpg",
       "description": "Top‑spec Ariya with dual‑motor all‑wheel drive and the longest range in the lineup."
     },
     {
@@ -2856,7 +2856,7 @@
       "price_usd": 54990,
       "country": "China",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/2022_Zeekr_001_%28front%29.jpg/640px-2022_Zeekr_001_%28front%29.jpg",
       "description": "A high‑performance electric sedan with a 102 kWh pack and up to 580 km WLTP range."
     },
     {
@@ -2877,7 +2877,7 @@
       "price_usd": 62990,
       "country": "China",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Nio_EC6_II_001.jpg/640px-Nio_EC6_II_001.jpg",
       "description": "Nio's sleek coupe‑style SUV offering dual‑motor performance and a 100 kWh battery."
     },
     {
@@ -2898,7 +2898,7 @@
       "price_usd": 69990,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/2020_Audi_e-Tron_Sport_50_Quattro.jpg/640px-2020_Audi_e-Tron_Sport_50_Quattro.jpg",
       "description": "Audi's aerodynamic SUV with a sloping roofline, 95 kWh pack and 300 mi EPA range."
     },
     {
@@ -2919,7 +2919,7 @@
       "price_usd": 27990,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/2022_Chevrolet_Bolt_EV_2LT%2C_NYC_official_fleet_1.2.23.jpg/640px-2022_Chevrolet_Bolt_EV_2LT%2C_NYC_official_fleet_1.2.23.jpg",
       "description": "An affordable compact EV with a 65 kWh battery delivering over 250 mi of range."
     },
     {
@@ -2940,7 +2940,7 @@
       "price_usd": 25990,
       "country": "Italy",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Ducati_748_Studio.jpg/960px-Ducati_748_Studio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "description": "Ducati's first electric adventure bike, combining sport performance with touring capability."
     },
     {
