@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-18T10:20:00Z",
+  "last_updated": "2026-05-19T09:59:55Z",
   "version": "1.0",
   "vehicle_count": 167,
   "vehicles": [
@@ -2961,7 +2961,7 @@
       "price_usd": 39990,
       "country": "China",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/BYD_Song_Pro_DM-i_2023_facelift_001_%28cropped%29.jpg/640px-BYD_Song_Pro_DM-i_2023_facelift_001_%28cropped%29.jpg",
       "description": "A midsize crossover from BYD offering a spacious interior and a 82 kWh battery."
     },
     {
@@ -2982,7 +2982,7 @@
       "price_usd": 250000,
       "country": "Sweden",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/2013_Volvo_FH16_540_demotruck.jpg/640px-2013_Volvo_FH16_540_demotruck.jpg",
       "description": "Volvo's heavy‑duty electric truck designed for long‑haul routes with a 600 kWh battery."
     },
     {
@@ -3003,7 +3003,7 @@
       "price_usd": 850000,
       "country": "Belgium",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Van_Hool_Astromega%2C_Busworld_Europe_2023%2C_Brussels_%28P1140152%29.jpg/960px-Van_Hool_Astromega%2C_Busworld_Europe_2023%2C_Brussels_%28P1140152%29.jpg",
       "description": "A full‑size electric coach from Van Hool with a 350 kWh pack for intercity travel."
     },
     {
@@ -3024,7 +3024,7 @@
       "price_usd": 34500,
       "country": "South Korea",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Hyundai_Kona_N_Line_%28SX2%29_DSC_8250.jpg/640px-Hyundai_Kona_N_Line_%28SX2%29_DSC_8250.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "description": "A compact electric SUV offering a practical range and a spacious interior."
     },
     {
