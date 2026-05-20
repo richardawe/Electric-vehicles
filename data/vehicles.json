@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-05-19T09:59:55Z",
+  "last_updated": "2026-05-20T09:49:43Z",
   "version": "1.0",
-  "vehicle_count": 167,
+  "vehicle_count": 168,
   "vehicles": [
     {
       "id": "tesla-model-3-2024",
@@ -3045,7 +3045,7 @@
       "price_usd": 32995,
       "country": "South Korea",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Kia_Niro_%28SG2%29_PHEV_Leonberg_2022_1X7A0474.jpg/640px-Kia_Niro_%28SG2%29_PHEV_Leonberg_2022_1X7A0474.jpg",
       "description": "A versatile crossover with a solid electric range and a comfortable cabin."
     },
     {
@@ -3066,7 +3066,7 @@
       "price_usd": 62990,
       "country": "Sweden",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Volvo_XC90_T8_AWD_Plug-in_Hybrid_Plus_%28II%2C_2._Facelift%29_%E2%80%93_f_03102025.jpg/640px-Volvo_XC90_T8_AWD_Plug-in_Hybrid_Plus_%28II%2C_2._Facelift%29_%E2%80%93_f_03102025.jpg",
       "description": "Volvo's flagship three‑row SUV combines plug‑in hybrid efficiency with premium Scandinavian design."
     },
     {
@@ -3087,7 +3087,7 @@
       "price_usd": 79995,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Trevor_Milton_%28cropped%29.jpg/640px-Trevor_Milton_%28cropped%29.jpg",
       "description": "A Class 8 electric truck designed for long‑haul routes with a high‑capacity battery and hydrogen‑assist options."
     },
     {
@@ -3108,7 +3108,7 @@
       "price_usd": 210000,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Mercedes-Benz_eActros_600%2C_Frankfurt_am_Main_%28P1032695%29.jpg/960px-Mercedes-Benz_eActros_600%2C_Frankfurt_am_Main_%28P1032695%29.jpg",
       "description": "Mercedes‑Benz's heavy‑duty electric truck for urban distribution, featuring modular battery packs."
     },
     {
@@ -3129,7 +3129,7 @@
       "price_usd": 185000,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Freightliner_Business_Class_M2_box_rigid.jpg/640px-Freightliner_Business_Class_M2_box_rigid.jpg",
       "description": "A medium‑duty electric truck aimed at city freight, offering flexible chassis configurations."
     },
     {
@@ -3150,7 +3150,7 @@
       "price_usd": null,
       "country": "China",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/2015_BYD_e5.jpg/640px-2015_BYD_e5.jpg",
       "description": "A 12‑meter city bus with a high‑capacity battery, designed for dense urban routes."
     },
     {
@@ -3171,7 +3171,7 @@
       "price_usd": 64990,
       "country": "Japan",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Lexus_RZ_300e_%28XEBM10%29_IMG_6622.jpg/640px-Lexus_RZ_300e_%28XEBM10%29_IMG_6622.jpg",
       "description": "Lexus' first dedicated electric SUV, offering a premium interior and a 71 kWh battery."
     },
     {
@@ -3192,7 +3192,7 @@
       "price_usd": 119900,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/2021_Cadillac_Escalade_ESV_4WD_Premium_Luxury_in_Satin_Steel_Metallic%2C_front_right.jpg/640px-2021_Cadillac_Escalade_ESV_4WD_Premium_Luxury_in_Satin_Steel_Metallic%2C_front_right.jpg",
       "description": "Cadillac's flagship electric luxury SUV, featuring a 100 kWh pack and advanced driver assistance."
     },
     {
@@ -3276,7 +3276,7 @@
       "price_usd": 54990,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Audi_Q5_e-tron_008_%28cropped%29.jpg/640px-Audi_Q5_e-tron_008_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "description": "Audi's entry‑level electric SUV, combining familiar Q5 styling with a 95 kWh battery."
     },
     {
@@ -3509,6 +3509,27 @@
       "global_availability": true,
       "image_url": "",
       "description": "Updated entry‑level EQC with a modestly larger battery and refreshed styling."
+    },
+    {
+      "id": "chevrolet-blazer-ev-2024",
+      "make": "Chevrolet",
+      "model": "Blazer EV",
+      "year": 2024,
+      "type": "suv",
+      "variant": "RS",
+      "range_mi": 320,
+      "range_km": 515,
+      "battery_kwh": 76.0,
+      "acceleration_0_60_sec": 6.5,
+      "top_speed_mph": 115,
+      "top_speed_kmh": 185,
+      "dc_fast_charge_kw": 200,
+      "charge_time_10_80_min": 30,
+      "price_usd": 44990,
+      "country": "USA",
+      "global_availability": true,
+      "image_url": "",
+      "description": "A compact electric SUV with a spacious interior, fast charging capability, and a competitive price point."
     }
   ]
 }
