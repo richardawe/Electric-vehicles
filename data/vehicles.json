@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-21T09:57:11Z",
+  "last_updated": "2026-05-22T09:41:17Z",
   "version": "1.0",
   "vehicle_count": 174,
   "vehicles": [
@@ -3528,7 +3528,7 @@
       "price_usd": 44990,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/2024_Chevrolet_Blazer_EV_2LT_AWD_in_Summit_White%2C_front_right%2C_2024-03-31.jpg/640px-2024_Chevrolet_Blazer_EV_2LT_AWD_in_Summit_White%2C_front_right%2C_2024-03-31.jpg",
       "description": "A compact electric SUV with a spacious interior, fast charging capability, and a competitive price point."
     },
     {
@@ -3549,7 +3549,7 @@
       "price_usd": 39990,
       "country": "Japan",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/%28CHN-Zhejiang%29_Private_FAW-Toyota_bZ3_%E6%B5%99ABT59A6_2024-12-15.jpg/640px-%28CHN-Zhejiang%29_Private_FAW-Toyota_bZ3_%E6%B5%99ABT59A6_2024-12-15.jpg",
       "description": "Toyota's compact electric SUV offering a balanced mix of range and affordability."
     },
     {
@@ -3570,7 +3570,7 @@
       "price_usd": 119990,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/2022_Lucid_Air_Grand_Touring_in_Zenith_Red%2C_front_left.jpg/640px-2022_Lucid_Air_Grand_Touring_in_Zenith_Red%2C_front_left.jpg",
       "description": "Top‑trim luxury sedan with maximum range and performance from Lucid."
     },
     {
@@ -3591,7 +3591,7 @@
       "price_usd": 42990,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/2021_SAIC-Volkswagen_ID.6_X_%28front%29.jpg/640px-2021_SAIC-Volkswagen_ID.6_X_%28front%29.jpg",
       "description": "Volkswagen's three‑row electric SUV for the Chinese market, now expanding globally."
     },
     {
@@ -3612,7 +3612,7 @@
       "price_usd": 36990,
       "country": "China",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/2023_BYD_Song_Plus_DM-i_%28front%29.jpg/640px-2023_BYD_Song_Plus_DM-i_%28front%29.jpg",
       "description": "A larger BYD crossover with extended range and spacious interior."
     },
     {
