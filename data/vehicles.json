@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-05-30T08:37:56Z",
+  "last_updated": "2026-05-31T08:56:25Z",
   "version": "1.0",
-  "vehicle_count": 228,
+  "vehicle_count": 233,
   "vehicles": [
     {
       "id": "tesla-model-3-2024",
@@ -4578,7 +4578,7 @@
       "price_usd": 64990,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Rivian_Normal_Plant_Floor.jpg/960px-Rivian_Normal_Plant_Floor.jpg",
       "description": "Smaller sibling to the R1S, aimed at a broader market with a more affordable price point."
     },
     {
@@ -4599,7 +4599,7 @@
       "price_usd": 42500,
       "country": "Japan",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Toyota_bZ4X_Automesse_Ludwigsburg_2022_1X7A5895.jpg/640px-Toyota_bZ4X_Automesse_Ludwigsburg_2022_1X7A5895.jpg",
       "description": "2025 model year of Toyota's first dedicated electric SUV, offering a balanced mix of range and affordability."
     },
     {
@@ -4620,7 +4620,7 @@
       "price_usd": 48990,
       "country": "China",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/NIO_ET5_IMG_8291.jpg/640px-NIO_ET5_IMG_8291.jpg",
       "description": "Nio's compact electric sedan with a 100 kWh battery and Nio Power fast‑charging network."
     },
     {
@@ -4641,7 +4641,7 @@
       "price_usd": 45900,
       "country": "China",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/2021_XPeng_P5.jpg/640px-2021_XPeng_P5.jpg",
       "description": "Xpeng's flagship sedan with advanced driver assistance and a spacious interior."
     },
     {
@@ -4662,7 +4662,7 @@
       "price_usd": 53990,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/2025_Volkswagen_ID4_Pro_Redspot_front.jpg/640px-2025_Volkswagen_ID4_Pro_Redspot_front.jpg",
       "description": "Performance‑oriented version of the ID.5 crossover, featuring sport‑tuned suspension and dual‑motor AWD."
     },
     {
@@ -4683,7 +4683,7 @@
       "price_usd": 59500,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/2023_Cadillac_Lyriq_in_Satin_Steel_Metallic%2C_front_left.jpg/640px-2023_Cadillac_Lyriq_in_Satin_Steel_Metallic%2C_front_left.jpg",
       "description": "2025 refresh of Cadillac's flagship EV SUV with upgraded interior tech and a larger battery."
     },
     {
@@ -4790,6 +4790,111 @@
       "global_availability": true,
       "image_url": "",
       "description": "Luxury full‑size electric SUV from Mercedes, featuring the latest MBUX system and a high‑capacity battery."
+    },
+    {
+      "id": "xpeng-g6-2024",
+      "make": "XPeng",
+      "model": "G6",
+      "year": 2024,
+      "type": "suv",
+      "variant": null,
+      "range_mi": 360,
+      "range_km": 579,
+      "battery_kwh": 87.5,
+      "acceleration_0_60_sec": 4.8,
+      "top_speed_mph": 124,
+      "top_speed_kmh": 200,
+      "dc_fast_charge_kw": 250,
+      "charge_time_10_80_min": 28,
+      "price_usd": 48990,
+      "country": "China",
+      "global_availability": true,
+      "image_url": "",
+      "description": "XPeng's flagship SUV with advanced Lidar‑assisted autonomous driving and a sleek fast‑charging system."
+    },
+    {
+      "id": "li-auto-l7-2024",
+      "make": "Li Auto",
+      "model": "L7",
+      "year": 2024,
+      "type": "suv",
+      "variant": "Premium",
+      "range_mi": 420,
+      "range_km": 676,
+      "battery_kwh": 115.0,
+      "acceleration_0_60_sec": 4.5,
+      "top_speed_mph": 130,
+      "top_speed_kmh": 209,
+      "dc_fast_charge_kw": 200,
+      "charge_time_10_80_min": 32,
+      "price_usd": 62990,
+      "country": "China",
+      "global_availability": false,
+      "image_url": "",
+      "description": "Li Auto's large three‑row EV SUV with a powerful dual‑motor layout and extended range."
+    },
+    {
+      "id": "cadillac-lyriq-2024-base",
+      "make": "Cadillac",
+      "model": "Lyriq",
+      "year": 2024,
+      "type": "suv",
+      "variant": "Base",
+      "range_mi": 300,
+      "range_km": 483,
+      "battery_kwh": 100.0,
+      "acceleration_0_60_sec": 6.2,
+      "top_speed_mph": 115,
+      "top_speed_kmh": 185,
+      "dc_fast_charge_kw": 190,
+      "charge_time_10_80_min": 35,
+      "price_usd": 59500,
+      "country": "USA",
+      "global_availability": true,
+      "image_url": "",
+      "description": "Cadillac's entry‑level electric SUV delivering a premium interior and solid range."
+    },
+    {
+      "id": "chevrolet-bolt-euv-2024-base",
+      "make": "Chevrolet",
+      "model": "Bolt EUV",
+      "year": 2024,
+      "type": "suv",
+      "variant": "Base",
+      "range_mi": 247,
+      "range_km": 398,
+      "battery_kwh": 65.0,
+      "acceleration_0_60_sec": 7.5,
+      "top_speed_mph": 93,
+      "top_speed_kmh": 150,
+      "dc_fast_charge_kw": 55,
+      "charge_time_10_80_min": 45,
+      "price_usd": 27990,
+      "country": "USA",
+      "global_availability": true,
+      "image_url": "",
+      "description": "A more affordable Bolt EUV variant with essential features and a practical compact SUV footprint."
+    },
+    {
+      "id": "porsche-taycan-2024-base",
+      "make": "Porsche",
+      "model": "Taycan",
+      "year": 2024,
+      "type": "sedan",
+      "variant": "Base",
+      "range_mi": 260,
+      "range_km": 418,
+      "battery_kwh": 79.2,
+      "acceleration_0_60_sec": 5.4,
+      "top_speed_mph": 143,
+      "top_speed_kmh": 230,
+      "dc_fast_charge_kw": 270,
+      "charge_time_10_80_min": 22,
+      "price_usd": 81990,
+      "country": "Germany",
+      "global_availability": true,
+      "image_url": "",
+      "description": "The entry‑level Taycan combines Porsche performance with everyday usability."
     }
   ]
 }
