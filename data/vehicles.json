@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-05T10:05:51Z",
+  "last_updated": "2026-06-06T08:42:40Z",
   "version": "1.0",
   "vehicle_count": 264,
   "vehicles": [
@@ -5460,7 +5460,7 @@
       "price_usd": 210000,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Bakersfield%2C_%28CA%29_Truck_Peterbilt_at_Flying_J_Travel_Plaza_%28en2016%29_%2812%29.JPG/960px-Bakersfield%2C_%28CA%29_Truck_Peterbilt_at_Flying_J_Travel_Plaza_%28en2016%29_%2812%29.JPG",
       "description": "Heavy‑duty electric tractor‑trailer offering up to 300 mi range for long‑haul applications."
     },
     {
@@ -5481,7 +5481,7 @@
       "price_usd": 950000,
       "country": "Sweden",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Volvo9700HD-UG-B13R-6x2-NOR-WAY1.jpg/640px-Volvo9700HD-UG-B13R-6x2-NOR-WAY1.jpg",
       "description": "Intercity coach with a 500 kWh battery delivering up to 250 mi on a single charge."
     },
     {
@@ -5502,7 +5502,7 @@
       "price_usd": 11995,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/2011_zero-xu.jpg/640px-2011_zero-xu.jpg",
       "description": "Lightweight sport electric motorcycle with rapid charging and strong performance."
     },
     {
@@ -5523,7 +5523,7 @@
       "price_usd": 45990,
       "country": "Japan",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/2023_Nissan_Ariya_Advance_Front.jpg/640px-2023_Nissan_Ariya_Advance_Front.jpg",
       "description": "Next‑generation Ariya with a larger 87 kWh pack and extended 340 mi range."
     },
     {
