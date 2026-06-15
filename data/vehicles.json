@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-14T09:48:59Z",
+  "last_updated": "2026-06-15T12:33:51Z",
   "version": "1.0",
-  "vehicle_count": 330,
+  "vehicle_count": 336,
   "vehicles": [
     {
       "id": "tesla-model-3-2024",
@@ -6552,7 +6552,7 @@
       "price_usd": 45990,
       "country": "South Korea",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Hyundai_Ioniq_5_AWD_Techniq-Paket_%E2%80%93_f_31122024.jpg/640px-Hyundai_Ioniq_5_AWD_Techniq-Paket_%E2%80%93_f_31122024.jpg",
       "description": "The 2026 Ioniq 5 adds an AWD long‑range version with a larger 77.4 kWh pack and 350 kW fast‑charging capability."
     },
     {
@@ -6573,7 +6573,7 @@
       "price_usd": 52990,
       "country": "South Korea",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Kia_EV9_1X7A2472.jpg/640px-Kia_EV9_1X7A2472.jpg",
       "description": "Kia expands its EV lineup with the 2026 EV9, a three‑row electric SUV offering up to 360 mi of range."
     },
     {
@@ -6594,7 +6594,7 @@
       "price_usd": 39990,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Volkswagen_ID._Buzz_1X7A6263.jpg/640px-Volkswagen_ID._Buzz_1X7A6263.jpg",
       "description": "The 2026 ID. Buzz returns with a larger battery and a higher‑capacity Pro trim, targeting families and commercial users."
     },
     {
@@ -6615,7 +6615,7 @@
       "price_usd": 44990,
       "country": "Japan",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Toyota_bZ4X_Automesse_Ludwigsburg_2022_1X7A5895.jpg/640px-Toyota_bZ4X_Automesse_Ludwigsburg_2022_1X7A5895.jpg",
       "description": "Toyota's 2026 bZ4X adds a dual‑motor AWD version with a 71 kWh pack and a 300‑mile EPA range."
     },
     {
@@ -6636,7 +6636,7 @@
       "price_usd": 59990,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/RivianR2.jpg/640px-RivianR2.jpg",
       "description": "Rivian's second‑generation R2 SUV offers a larger battery, faster charging and a more affordable price point than the R1S."
     },
     {
@@ -6657,7 +6657,7 @@
       "price_usd": 119990,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/BMW_iX_IAA_2021_1X7A0204.jpg/640px-BMW_iX_IAA_2021_1X7A0204.jpg",
       "description": "BMW's flagship iX M70 adds a 111.5 kWh pack, delivering 340 mi of range and sports‑car level acceleration."
     },
     {
@@ -6932,6 +6932,132 @@
       "global_availability": true,
       "image_url": "",
       "description": "High‑performance electric sportbike from Zero, featuring upgraded battery and premium components."
+    },
+    {
+      "id": "volvo-c40-recharge-2024",
+      "make": "Volvo",
+      "model": "C40 Recharge",
+      "year": 2024,
+      "type": "suv",
+      "variant": "Long Range",
+      "range_mi": 260,
+      "range_km": 418,
+      "battery_kwh": 78.0,
+      "acceleration_0_60_sec": 4.7,
+      "top_speed_mph": 124,
+      "top_speed_kmh": 200,
+      "dc_fast_charge_kw": 150,
+      "charge_time_10_80_min": 30,
+      "price_usd": 45990,
+      "country": "Sweden",
+      "global_availability": true,
+      "image_url": "",
+      "description": "Volvo's compact electric SUV with a minimalist design and a 78 kWh battery."
+    },
+    {
+      "id": "bmw-ix-m70-2025",
+      "make": "BMW",
+      "model": "iX M70",
+      "year": 2025,
+      "type": "suv",
+      "variant": "M70",
+      "range_mi": 300,
+      "range_km": 483,
+      "battery_kwh": 106.0,
+      "acceleration_0_60_sec": 3.8,
+      "top_speed_mph": 155,
+      "top_speed_kmh": 250,
+      "dc_fast_charge_kw": 250,
+      "charge_time_10_80_min": 25,
+      "price_usd": 119990,
+      "country": "Germany",
+      "global_availability": true,
+      "image_url": "",
+      "description": "Top‑performance version of the iX with a 106 kWh battery and 0‑60 in under 4 seconds."
+    },
+    {
+      "id": "ford-mustang-mach-e-gt-2025",
+      "make": "Ford",
+      "model": "Mustang Mach‑E GT",
+      "year": 2025,
+      "type": "suv",
+      "variant": "GT",
+      "range_mi": 260,
+      "range_km": 418,
+      "battery_kwh": 98.0,
+      "acceleration_0_60_sec": 3.5,
+      "top_speed_mph": 130,
+      "top_speed_kmh": 209,
+      "dc_fast_charge_kw": 250,
+      "charge_time_10_80_min": 24,
+      "price_usd": 64990,
+      "country": "USA",
+      "global_availability": true,
+      "image_url": "",
+      "description": "Performance‑focused Mach‑E with a 98 kWh pack and GT‑level handling."
+    },
+    {
+      "id": "chevrolet-bolt-euv-2026",
+      "make": "Chevrolet",
+      "model": "Bolt EUV",
+      "year": 2026,
+      "type": "suv",
+      "variant": "Premier",
+      "range_mi": 250,
+      "range_km": 402,
+      "battery_kwh": 65.0,
+      "acceleration_0_60_sec": 6.5,
+      "top_speed_mph": 93,
+      "top_speed_kmh": 150,
+      "dc_fast_charge_kw": 115,
+      "charge_time_10_80_min": 35,
+      "price_usd": 32990,
+      "country": "USA",
+      "global_availability": true,
+      "image_url": "",
+      "description": "Updated Bolt EUV with a larger battery and refreshed styling."
+    },
+    {
+      "id": "nissan-leaf-plus-2025",
+      "make": "Nissan",
+      "model": "Leaf Plus",
+      "year": 2025,
+      "type": "sedan",
+      "variant": null,
+      "range_mi": 226,
+      "range_km": 364,
+      "battery_kwh": 62.0,
+      "acceleration_0_60_sec": 7.4,
+      "top_speed_mph": 93,
+      "top_speed_kmh": 150,
+      "dc_fast_charge_kw": 100,
+      "charge_time_10_80_min": 40,
+      "price_usd": 31990,
+      "country": "Japan",
+      "global_availability": true,
+      "image_url": "",
+      "description": "The latest iteration of Nissan's best‑selling electric hatchback with modest range improvements."
+    },
+    {
+      "id": "volvo-exc90-2025",
+      "make": "Volvo",
+      "model": "EXC90",
+      "year": 2025,
+      "type": "suv",
+      "variant": "Twin Motor",
+      "range_mi": 340,
+      "range_km": 547,
+      "battery_kwh": 111.0,
+      "acceleration_0_60_sec": 4.9,
+      "top_speed_mph": 124,
+      "top_speed_kmh": 200,
+      "dc_fast_charge_kw": 250,
+      "charge_time_10_80_min": 24,
+      "price_usd": 119990,
+      "country": "Sweden",
+      "global_availability": true,
+      "image_url": "",
+      "description": "Volvo's flagship electric SUV, offering a 111 kWh battery and premium Scandinavian design."
     }
   ]
 }
