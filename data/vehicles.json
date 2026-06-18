@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-17T11:10:52Z",
+  "last_updated": "2026-06-18T10:41:51Z",
   "version": "1.0",
-  "vehicle_count": 351,
+  "vehicle_count": 356,
   "vehicles": [
     {
       "id": "tesla-model-3-2024",
@@ -6888,7 +6888,7 @@
       "price_usd": 84990,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Porsche_Macan_4_IMG_2153.jpg/640px-Porsche_Macan_4_IMG_2153.jpg",
       "description": "First fully electric Macan, delivering Porsche handling in a compact luxury SUV."
     },
     {
@@ -6909,7 +6909,7 @@
       "price_usd": 69990,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/2024_Chevrolet_Silverado_EV_4WT_AWD_in_Summit_White%2C_front_left%2C_2024-06-30.jpg/640px-2024_Chevrolet_Silverado_EV_4WT_AWD_in_Summit_White%2C_front_left%2C_2024-06-30.jpg",
       "description": "Entry‑level version of Chevrolet's electric full‑size pickup, offering high payload and towing capacity."
     },
     {
@@ -6930,7 +6930,7 @@
       "price_usd": 22995,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/2011_zero-xu.jpg/640px-2011_zero-xu.jpg",
       "description": "High‑performance electric sportbike from Zero, featuring upgraded battery and premium components."
     },
     {
@@ -6951,7 +6951,7 @@
       "price_usd": 45990,
       "country": "Sweden",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/2019_Volvo_XC40_T5_Momentum_in_Bright_Silver_Metallic%2C_front_left%2C_2025-09-22.jpg/640px-2019_Volvo_XC40_T5_Momentum_in_Bright_Silver_Metallic%2C_front_left%2C_2025-09-22.jpg",
       "description": "Volvo's compact electric SUV with a minimalist design and a 78 kWh battery."
     },
     {
@@ -6972,7 +6972,7 @@
       "price_usd": 119990,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/BMW_iX_IAA_2021_1X7A0204.jpg/640px-BMW_iX_IAA_2021_1X7A0204.jpg",
       "description": "Top‑performance version of the iX with a 106 kWh battery and 0‑60 in under 4 seconds."
     },
     {
@@ -6993,7 +6993,7 @@
       "price_usd": 64990,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/2021_Ford_Mustang_Mach-E_Standard_Range_Front.jpg/640px-2021_Ford_Mustang_Mach-E_Standard_Range_Front.jpg",
       "description": "Performance‑focused Mach‑E with a 98 kWh pack and GT‑level handling."
     },
     {
@@ -7014,7 +7014,7 @@
       "price_usd": 32990,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Chevy_%2814467564735%29.jpg/640px-Chevy_%2814467564735%29.jpg",
       "description": "Updated Bolt EUV with a larger battery and refreshed styling."
     },
     {
@@ -7373,6 +7373,111 @@
       "global_availability": true,
       "image_url": "",
       "description": "Rivian's next‑generation electric pickup, larger than the R1T and equipped with a 135 kWh pack for up to 400 miles."
+    },
+    {
+      "id": "bmw-ix3-2025",
+      "make": "BMW",
+      "model": "iX3",
+      "year": 2025,
+      "type": "suv",
+      "variant": null,
+      "range_mi": 285,
+      "range_km": 459,
+      "battery_kwh": 74.0,
+      "acceleration_0_60_sec": 6.8,
+      "top_speed_mph": 124,
+      "top_speed_kmh": 200,
+      "dc_fast_charge_kw": 150,
+      "charge_time_10_80_min": 30,
+      "price_usd": 62990,
+      "country": "Germany",
+      "global_availability": true,
+      "image_url": "",
+      "description": "The 2025 BMW iX3 continues the electric version of the X3 with a 74 kWh battery and a modest range for urban driving."
+    },
+    {
+      "id": "mercedes-evito-2025",
+      "make": "Mercedes-Benz",
+      "model": "eVito",
+      "year": 2025,
+      "type": "van",
+      "variant": null,
+      "range_mi": 210,
+      "range_km": 338,
+      "battery_kwh": 55.0,
+      "acceleration_0_60_sec": null,
+      "top_speed_mph": 87,
+      "top_speed_kmh": 140,
+      "dc_fast_charge_kw": 110,
+      "charge_time_10_80_min": 35,
+      "price_usd": 48990,
+      "country": "Germany",
+      "global_availability": true,
+      "image_url": "",
+      "description": "The 2025 eVito offers a practical electric van solution for city logistics with a 55 kWh battery."
+    },
+    {
+      "id": "tesla-semi-2025",
+      "make": "Tesla",
+      "model": "Semi",
+      "year": 2025,
+      "type": "commercial",
+      "variant": "200 kWh",
+      "range_mi": 500,
+      "range_km": 805,
+      "battery_kwh": 200.0,
+      "acceleration_0_60_sec": 20,
+      "top_speed_mph": 80,
+      "top_speed_kmh": 129,
+      "dc_fast_charge_kw": 250,
+      "charge_time_10_80_min": 30,
+      "price_usd": 150000,
+      "country": "USA",
+      "global_availability": true,
+      "image_url": "",
+      "description": "Tesla's 2025 Semi with a 200 kWh pack delivers up to 500 mi range for long‑haul freight."
+    },
+    {
+      "id": "nissan-ariya-2027",
+      "make": "Nissan",
+      "model": "Ariya",
+      "year": 2027,
+      "type": "suv",
+      "variant": "e‑4ORCE+",
+      "range_mi": 340,
+      "range_km": 547,
+      "battery_kwh": 87.0,
+      "acceleration_0_60_sec": 5.1,
+      "top_speed_mph": 124,
+      "top_speed_kmh": 200,
+      "dc_fast_charge_kw": 200,
+      "charge_time_10_80_min": 28,
+      "price_usd": 45990,
+      "country": "Japan",
+      "global_availability": true,
+      "image_url": "",
+      "description": "The 2027 Ariya receives an upgraded e‑4ORCE+ drivetrain and a larger 87 kWh battery for extended range."
+    },
+    {
+      "id": "volvo-fh-16-electric-2025",
+      "make": "Volvo",
+      "model": "FH 16 Electric",
+      "year": 2025,
+      "type": "commercial",
+      "variant": null,
+      "range_mi": 300,
+      "range_km": 483,
+      "battery_kwh": 600.0,
+      "acceleration_0_60_sec": null,
+      "top_speed_mph": 75,
+      "top_speed_kmh": 121,
+      "dc_fast_charge_kw": 300,
+      "charge_time_10_80_min": 45,
+      "price_usd": 450000,
+      "country": "Sweden",
+      "global_availability": true,
+      "image_url": "",
+      "description": "Volvo's heavy‑duty FH 16 Electric for long‑haul applications, featuring a 600 kWh battery pack."
     }
   ]
 }
