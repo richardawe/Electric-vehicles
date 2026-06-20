@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-19T10:50:57Z",
+  "last_updated": "2026-06-20T09:30:47Z",
   "version": "1.0",
-  "vehicle_count": 364,
+  "vehicle_count": 368,
   "vehicles": [
     {
       "id": "tesla-model-3-2024",
@@ -7119,7 +7119,7 @@
       "price_usd": 44990,
       "country": "Japan",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/2021_Mazda_MX-30_Front.jpg/640px-2021_Mazda_MX-30_Front.jpg",
       "description": "Mazda's second‑generation MX‑30 adds a larger 55 kWh pack and premium interior appointments for a more versatile EV crossover."
     },
     {
@@ -7140,7 +7140,7 @@
       "price_usd": 79990,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Fisker_Ocean_Motorworld_Munich_1X7A0079.jpg/640px-Fisker_Ocean_Motorworld_Munich_1X7A0079.jpg",
       "description": "The 2026 Ocean Extreme delivers top‑tier performance and a 115 kWh battery, pushing range past 350 miles."
     },
     {
@@ -7161,7 +7161,7 @@
       "price_usd": 69990,
       "country": "Japan",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Datsun_240Z_mfd_1970_registered_January_1971_per_dvla_2393cc.jpg/640px-Datsun_240Z_mfd_1970_registered_January_1971_per_dvla_2393cc.jpg",
       "description": "Nissan revives the iconic Z nameplate as a fully electric sports car with a 0‑60 time of 3 seconds."
     },
     {
@@ -7182,7 +7182,7 @@
       "price_usd": 52990,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/RivianR2.jpg/640px-RivianR2.jpg",
       "description": "Rivian's R2 enters the compact SUV segment in 2027, offering a more affordable entry point with a 300‑mile range."
     },
     {
@@ -7203,7 +7203,7 @@
       "price_usd": 44990,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Mercedes-Benz_V_250_d_Exclusive_AMG_Line_Lang_%28V_447%29_%E2%80%93_Frontansicht%2C_29._Juni_2016%2C_D%C3%BCsseldorf.jpg/640px-Mercedes-Benz_V_250_d_Exclusive_AMG_Line_Lang_%28V_447%29_%E2%80%93_Frontansicht%2C_29._Juni_2016%2C_D%C3%BCsseldorf.jpg",
       "description": "The eVito is Mercedes‑Benz's electric cargo van, offering a practical payload and a 45 kWh battery for urban deliveries."
     },
     {
@@ -7646,6 +7646,90 @@
       "global_availability": true,
       "image_url": "",
       "description": "The 2025 ID.5 Pro adds a larger battery and updated infotainment, delivering up to 310 mi of range."
+    },
+    {
+      "id": "renault-5-ev-2024",
+      "make": "Renault",
+      "model": "5 EV",
+      "year": 2024,
+      "type": "sedan",
+      "variant": null,
+      "range_mi": 310,
+      "range_km": 500,
+      "battery_kwh": 52.0,
+      "acceleration_0_60_sec": 7.5,
+      "top_speed_mph": 124,
+      "top_speed_kmh": 200,
+      "dc_fast_charge_kw": 130,
+      "charge_time_10_80_min": 30,
+      "price_usd": 29990,
+      "country": "France",
+      "global_availability": true,
+      "image_url": "",
+      "description": "A modern electric reinterpretation of the classic Renault 5, offering compact city mobility with a respectable range."
+    },
+    {
+      "id": "polestar-5-2025",
+      "make": "Polestar",
+      "model": "5",
+      "year": 2025,
+      "type": "sedan",
+      "variant": "Long Range Dual Motor",
+      "range_mi": 360,
+      "range_km": 580,
+      "battery_kwh": 102.0,
+      "acceleration_0_60_sec": 4.0,
+      "top_speed_mph": 155,
+      "top_speed_kmh": 250,
+      "dc_fast_charge_kw": 250,
+      "charge_time_10_80_min": 22,
+      "price_usd": 69990,
+      "country": "Sweden",
+      "global_availability": true,
+      "image_url": "",
+      "description": "Polestar's flagship electric sedan, combining high performance with a spacious, minimalist interior."
+    },
+    {
+      "id": "audi-q6-e-tron-2025",
+      "make": "Audi",
+      "model": "Q6 e-tron",
+      "year": 2025,
+      "type": "suv",
+      "variant": "Premium Plus",
+      "range_mi": 340,
+      "range_km": 550,
+      "battery_kwh": 95.0,
+      "acceleration_0_60_sec": 5.2,
+      "top_speed_mph": 143,
+      "top_speed_kmh": 230,
+      "dc_fast_charge_kw": 210,
+      "charge_time_10_80_min": 28,
+      "price_usd": 57990,
+      "country": "Germany",
+      "global_availability": true,
+      "image_url": "",
+      "description": "A larger, more luxurious sibling to the Q4 e-tron, offering three rows of seating and advanced driver assistance."
+    },
+    {
+      "id": "rivian-r2s-2027",
+      "make": "Rivian",
+      "model": "R2S",
+      "year": 2027,
+      "type": "suv",
+      "variant": "Standard",
+      "range_mi": 300,
+      "range_km": 480,
+      "battery_kwh": 80.0,
+      "acceleration_0_60_sec": 5.5,
+      "top_speed_mph": 115,
+      "top_speed_kmh": 185,
+      "dc_fast_charge_kw": 200,
+      "charge_time_10_80_min": 30,
+      "price_usd": 44990,
+      "country": "USA",
+      "global_availability": true,
+      "image_url": "",
+      "description": "A more affordable, compact SUV from Rivian, built on the same platform as the R1S but with a smaller footprint."
     }
   ]
 }
