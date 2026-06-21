@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-20T09:30:47Z",
+  "last_updated": "2026-06-21T10:03:31Z",
   "version": "1.0",
-  "vehicle_count": 368,
+  "vehicle_count": 369,
   "vehicles": [
     {
       "id": "tesla-model-3-2024",
@@ -7224,7 +7224,7 @@
       "price_usd": 39990,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Ford_Transit_Connect_%283rd_generation%29_IMG_3395.jpg/640px-Ford_Transit_Connect_%283rd_generation%29_IMG_3395.jpg",
       "description": "A compact electric van based on the popular Transit Connect, designed for city logistics with a 68 kWh pack."
     },
     {
@@ -7245,7 +7245,7 @@
       "price_usd": 48990,
       "country": "Japan",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Toyota_bZ3C_001_%28cropped%29.jpg/960px-Toyota_bZ3C_001_%28cropped%29.jpg",
       "description": "Toyota's next‑generation electric SUV, expanding the bZ series with a larger battery and longer range."
     },
     {
@@ -7266,7 +7266,7 @@
       "price_usd": 52990,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/2022_BMW_X1_sDrive18d_M_Sport_MHEV_Automatic_2.0.jpg/640px-2022_BMW_X1_sDrive18d_M_Sport_MHEV_Automatic_2.0.jpg",
       "description": "The next‑generation compact electric SUV from BMW, offering a larger battery and more interior space."
     },
     {
@@ -7287,7 +7287,7 @@
       "price_usd": 48990,
       "country": "South Korea",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/2023_Hyundai_Ioniq_6_Limited%2C_front_4.27.23.jpg/640px-2023_Hyundai_Ioniq_6_Limited%2C_front_4.27.23.jpg",
       "description": "A refreshed Ioniq 6 with an extended‑range battery and updated aerodynamic design."
     },
     {
@@ -7308,7 +7308,7 @@
       "price_usd": 62990,
       "country": "South Korea",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Kia_EV9_1X7A2472.jpg/640px-Kia_EV9_1X7A2472.jpg",
       "description": "Kia's flagship three‑row electric SUV, slated for 2027 with a 100 kWh pack and 380‑mile range."
     },
     {
@@ -7329,7 +7329,7 @@
       "price_usd": 45990,
       "country": "Japan",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/2025_Nissan_Kicks_SV_AWD_in_Deep_Blue_Pearl%2C_front_right%2C_2024-10-06.jpg/640px-2025_Nissan_Kicks_SV_AWD_in_Deep_Blue_Pearl%2C_front_right%2C_2024-10-06.jpg",
       "description": "A higher‑performance Ariya variant featuring Nissan's e‑4ORCE+ dual‑motor system and an 87 kWh battery."
     },
     {
@@ -7730,6 +7730,27 @@
       "global_availability": true,
       "image_url": "",
       "description": "A more affordable, compact SUV from Rivian, built on the same platform as the R1S but with a smaller footprint."
+    },
+    {
+      "id": "byd-atto-3-2025-premium",
+      "make": "BYD",
+      "model": "Atto 3",
+      "year": 2025,
+      "type": "suv",
+      "variant": "Premium",
+      "range_mi": 310,
+      "range_km": 499,
+      "battery_kwh": 71,
+      "acceleration_0_60_sec": 6.0,
+      "top_speed_mph": 112,
+      "top_speed_kmh": 180,
+      "dc_fast_charge_kw": 180,
+      "charge_time_10_80_min": 28,
+      "price_usd": 39990,
+      "country": "China",
+      "global_availability": true,
+      "image_url": "",
+      "description": "The Premium trim of the 2025 Atto 3 adds upgraded interior materials and a larger 71 kWh battery."
     }
   ]
 }
