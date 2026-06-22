@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-21T10:03:31Z",
+  "last_updated": "2026-06-22T12:19:47Z",
   "version": "1.0",
   "vehicle_count": 369,
   "vehicles": [
@@ -7350,7 +7350,7 @@
       "price_usd": 52990,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/2025_Volkswagen_ID4_Pro_Redspot_front.jpg/640px-2025_Volkswagen_ID4_Pro_Redspot_front.jpg",
       "description": "The sportier GTX trim of VW's ID.5 crossover, delivering higher power and a 77 kWh battery."
     },
     {
@@ -7371,7 +7371,7 @@
       "price_usd": 84990,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Everything_Electric_Canada_2024_-_53982090651.jpg/640px-Everything_Electric_Canada_2024_-_53982090651.jpg",
       "description": "Rivian's next‑generation electric pickup, larger than the R1T and equipped with a 135 kWh pack for up to 400 miles."
     },
     {
@@ -7392,7 +7392,7 @@
       "price_usd": 62990,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/BMW_iX3_50_xDrive_M_Sportpaket_Pro_%28NA5%29_%E2%80%93_f_17052026.jpg/640px-BMW_iX3_50_xDrive_M_Sportpaket_Pro_%28NA5%29_%E2%80%93_f_17052026.jpg",
       "description": "The 2025 BMW iX3 continues the electric version of the X3 with a 74 kWh battery and a modest range for urban driving."
     },
     {
@@ -7413,7 +7413,7 @@
       "price_usd": 48990,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Mercedes-Benz_V_250_d_Exclusive_AMG_Line_Lang_%28V_447%29_%E2%80%93_Frontansicht%2C_29._Juni_2016%2C_D%C3%BCsseldorf.jpg/640px-Mercedes-Benz_V_250_d_Exclusive_AMG_Line_Lang_%28V_447%29_%E2%80%93_Frontansicht%2C_29._Juni_2016%2C_D%C3%BCsseldorf.jpg",
       "description": "The 2025 eVito offers a practical electric van solution for city logistics with a 55 kWh battery."
     },
     {
@@ -7434,7 +7434,7 @@
       "price_usd": 150000,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Tesla_Semi_Pepsi_2023-10-31-13-39-37_DSCF2583_dllu.jpg/640px-Tesla_Semi_Pepsi_2023-10-31-13-39-37_DSCF2583_dllu.jpg",
       "description": "Tesla's 2025 Semi with a 200 kWh pack delivers up to 500 mi range for long‑haul freight."
     },
     {
@@ -7455,7 +7455,7 @@
       "price_usd": 45990,
       "country": "Japan",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/2023_Nissan_Ariya_Advance_Front.jpg/640px-2023_Nissan_Ariya_Advance_Front.jpg",
       "description": "The 2027 Ariya receives an upgraded e‑4ORCE+ drivetrain and a larger 87 kWh battery for extended range."
     },
     {
@@ -7476,7 +7476,7 @@
       "price_usd": 450000,
       "country": "Sweden",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/2013_Volvo_FH16_540_demotruck.jpg/640px-2013_Volvo_FH16_540_demotruck.jpg",
       "description": "Volvo's heavy‑duty FH 16 Electric for long‑haul applications, featuring a 600 kWh battery pack."
     },
     {
