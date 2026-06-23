@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-22T12:19:47Z",
+  "last_updated": "2026-06-23T09:57:15Z",
   "version": "1.0",
-  "vehicle_count": 369,
+  "vehicle_count": 374,
   "vehicles": [
     {
       "id": "tesla-model-3-2024",
@@ -7497,7 +7497,7 @@
       "price_usd": 42990,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/2017_Audi_Q2_Sport_TDi_1.6_Front.jpg/640px-2017_Audi_Q2_Sport_TDi_1.6_Front.jpg",
       "description": "Compact electric SUV with a premium interior and a 62 kWh battery delivering up to 280 mi of range."
     },
     {
@@ -7518,7 +7518,7 @@
       "price_usd": 57990,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/BMW_U10_1X7A2456.jpg/640px-BMW_U10_1X7A2456.jpg",
       "description": "Second‑generation iX2 adds a larger battery and all‑wheel drive for a longer range and sportier performance."
     },
     {
@@ -7539,7 +7539,7 @@
       "price_usd": 27990,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/2022_Chevrolet_Bolt_EV_2LT%2C_NYC_official_fleet_1.2.23.jpg/640px-2022_Chevrolet_Bolt_EV_2LT%2C_NYC_official_fleet_1.2.23.jpg",
       "description": "Updated Bolt EV for 2025 gains a larger battery and refreshed styling while keeping an affordable price."
     },
     {
@@ -7560,7 +7560,7 @@
       "price_usd": 59990,
       "country": "South Korea",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Hyundai_IONIQ_electric_Premium_%E2%80%93_Frontansicht%2C_7._Mai_2017%2C_D%C3%BCsseldorf.jpg/640px-Hyundai_IONIQ_electric_Premium_%E2%80%93_Frontansicht%2C_7._Mai_2017%2C_D%C3%BCsseldorf.jpg",
       "description": "Hyundai's flagship electric SUV expands its footprint and offers an 88 kWh battery for up to 340 mi of range."
     },
     {
@@ -7581,7 +7581,7 @@
       "price_usd": 39990,
       "country": "Japan",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Lexus_UX_250h_IMG_2810.jpg/640px-Lexus_UX_250h_IMG_2810.jpg",
       "description": "The 2025 UX 300e receives a modest power‑train upgrade and a refreshed interior, targeting urban luxury buyers."
     },
     {
@@ -7751,6 +7751,111 @@
       "global_availability": true,
       "image_url": "",
       "description": "The Premium trim of the 2025 Atto 3 adds upgraded interior materials and a larger 71 kWh battery."
+    },
+    {
+      "id": "polestar-6-2024",
+      "make": "Polestar",
+      "model": "6",
+      "year": 2024,
+      "type": "sedan",
+      "variant": "Long Range Dual Motor",
+      "range_mi": 360,
+      "range_km": 580,
+      "battery_kwh": 102.0,
+      "acceleration_0_60_sec": 3.8,
+      "top_speed_mph": 155,
+      "top_speed_kmh": 250,
+      "dc_fast_charge_kw": 250,
+      "charge_time_10_80_min": 22,
+      "price_usd": 69990,
+      "country": "Sweden",
+      "global_availability": true,
+      "image_url": "",
+      "description": "Polestar's first flagship sedan, offering a sleek design and high performance with a 102 kWh battery."
+    },
+    {
+      "id": "lotus-emeya-2024",
+      "make": "Lotus",
+      "model": "Emeya",
+      "year": 2024,
+      "type": "sedan",
+      "variant": "Performance",
+      "range_mi": 310,
+      "range_km": 500,
+      "battery_kwh": 90.0,
+      "acceleration_0_60_sec": 3.2,
+      "top_speed_mph": 155,
+      "top_speed_kmh": 250,
+      "dc_fast_charge_kw": 200,
+      "charge_time_10_80_min": 24,
+      "price_usd": 119900,
+      "country": "UK",
+      "global_availability": true,
+      "image_url": "",
+      "description": "Lotus's first all‑electric sports sedan, combining lightweight dynamics with a 0‑60 mph time under 3.5 seconds."
+    },
+    {
+      "id": "mercedes-eqe-suv-2026",
+      "make": "Mercedes-Benz",
+      "model": "EQE SUV",
+      "year": 2026,
+      "type": "suv",
+      "variant": "400+",
+      "range_mi": 340,
+      "range_km": 547,
+      "battery_kwh": 108.0,
+      "acceleration_0_60_sec": 5.1,
+      "top_speed_mph": 130,
+      "top_speed_kmh": 209,
+      "dc_fast_charge_kw": 250,
+      "charge_time_10_80_min": 23,
+      "price_usd": 62990,
+      "country": "Germany",
+      "global_availability": true,
+      "image_url": "",
+      "description": "The 2026 EQE SUV adds a larger battery and updated infotainment, targeting the premium midsize electric SUV segment."
+    },
+    {
+      "id": "porsche-taycan-cross-turismo-2025",
+      "make": "Porsche",
+      "model": "Taycan Cross Turismo",
+      "year": 2025,
+      "type": "suv",
+      "variant": "Turbo",
+      "range_mi": 280,
+      "range_km": 450,
+      "battery_kwh": 93.4,
+      "acceleration_0_60_sec": 3.0,
+      "top_speed_mph": 155,
+      "top_speed_kmh": 250,
+      "dc_fast_charge_kw": 270,
+      "charge_time_10_80_min": 22,
+      "price_usd": 119900,
+      "country": "Germany",
+      "global_availability": true,
+      "image_url": "",
+      "description": "2025 model of Porsche's sporty wagon‑style EV, offering higher performance and a more rugged look."
+    },
+    {
+      "id": "rivian-r2s-2026",
+      "make": "Rivian",
+      "model": "R2S",
+      "year": 2026,
+      "type": "suv",
+      "variant": "Standard",
+      "range_mi": 350,
+      "range_km": 563,
+      "battery_kwh": 105.0,
+      "acceleration_0_60_sec": 4.2,
+      "top_speed_mph": 130,
+      "top_speed_kmh": 209,
+      "dc_fast_charge_kw": 250,
+      "charge_time_10_80_min": 24,
+      "price_usd": 64990,
+      "country": "USA",
+      "global_availability": true,
+      "image_url": "",
+      "description": "Compact sibling to the R2, the R2S adds a higher roofline and optional third row for families."
     }
   ]
 }
