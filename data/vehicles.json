@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-23T09:57:15Z",
+  "last_updated": "2026-06-24T09:42:34Z",
   "version": "1.0",
   "vehicle_count": 374,
   "vehicles": [
@@ -7602,7 +7602,7 @@
       "price_usd": 74990,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Mercedes-Benz_V295_350%2B_Classic-Days_2022_DSC_0018.jpg/640px-Mercedes-Benz_V295_350%2B_Classic-Days_2022_DSC_0018.jpg",
       "description": "2025 EQE adds a larger 90 kWh battery and optional rear‑wheel‑drive for a longer range and sportier feel."
     },
     {
@@ -7623,7 +7623,7 @@
       "price_usd": 64990,
       "country": "Sweden",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Polestar_4_DSC_8232_%28cropped_2%29.jpg/640px-Polestar_4_DSC_8232_%28cropped_2%29.jpg",
       "description": "Polestar's first dedicated SUV, the 4, offers a sleek design, 78 kWh pack and up to 320 mi of range."
     },
     {
@@ -7644,7 +7644,7 @@
       "price_usd": 44990,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/2025_Volkswagen_ID4_Pro_Redspot_front.jpg/640px-2025_Volkswagen_ID4_Pro_Redspot_front.jpg",
       "description": "The 2025 ID.5 Pro adds a larger battery and updated infotainment, delivering up to 310 mi of range."
     },
     {
@@ -7665,7 +7665,7 @@
       "price_usd": 29990,
       "country": "France",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Renault_5_E-Tech_Electric_DSC_7279.jpg/640px-Renault_5_E-Tech_Electric_DSC_7279.jpg",
       "description": "A modern electric reinterpretation of the classic Renault 5, offering compact city mobility with a respectable range."
     },
     {
@@ -7686,7 +7686,7 @@
       "price_usd": 69990,
       "country": "Sweden",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Polestar_5_Auto_Zuerich_2025_DSC_3198.jpg/640px-Polestar_5_Auto_Zuerich_2025_DSC_3198.jpg",
       "description": "Polestar's flagship electric sedan, combining high performance with a spacious, minimalist interior."
     },
     {
