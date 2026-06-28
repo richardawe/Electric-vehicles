@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-27T08:46:17Z",
+  "last_updated": "2026-06-28T09:23:19Z",
   "version": "1.0",
-  "vehicle_count": 401,
+  "vehicle_count": 405,
   "vehicles": [
     {
       "id": "tesla-model-3-2024",
@@ -7959,7 +7959,7 @@
       "price_usd": 39995,
       "country": "Sweden",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Volvo_EX30_IMG_8923.jpg/640px-Volvo_EX30_IMG_8923.jpg",
       "description": "Enhanced EX30 with added tech package and higher interior trim."
     },
     {
@@ -8064,7 +8064,7 @@
       "price_usd": 58990,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/2021_Ford_Mustang_Mach-E_Standard_Range_Front.jpg/640px-2021_Ford_Mustang_Mach-E_Standard_Range_Front.jpg",
       "description": "The 2026 Mustang Mach‑E GT Performance adds a larger 98 kWh pack and 0‑60 mph in 3.5 seconds, extending range and power."
     },
     {
@@ -8085,7 +8085,7 @@
       "price_usd": 29990,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Tesla_Cybercab_-_Berlin_2024.jpg/640px-Tesla_Cybercab_-_Berlin_2024.jpg",
       "description": "Tesla's entry‑level Model 2 offers an affordable price point with a compact footprint and 280‑mile EPA range."
     },
     {
@@ -8106,7 +8106,7 @@
       "price_usd": 25990,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Volkswagen_ID._Polo_IAA_2025_DSC_1387.jpg/640px-Volkswagen_ID._Polo_IAA_2025_DSC_1387.jpg",
       "description": "The ID.2all expands VW's electric lineup with a sub‑compact sedan, 58 kWh battery and European‑centric pricing."
     },
     {
@@ -8127,7 +8127,7 @@
       "price_usd": 64990,
       "country": "Japan",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/2023_Nissan_Ariya_Advance_Front.jpg/640px-2023_Nissan_Ariya_Advance_Front.jpg",
       "description": "The 2028 Ariya Ultimate delivers a 100 kWh pack, 350‑mile range and a 4‑second sprint, marking Nissan's flagship EV."
     },
     {
@@ -8423,6 +8423,90 @@
       "global_availability": true,
       "image_url": "",
       "description": "Volvo's compact EX30 gets a premium trim in 2027, featuring a 78 kWh pack and a 300‑mile EPA range."
+    },
+    {
+      "id": "nio-ec7-2024",
+      "make": "Nio",
+      "model": "EC7",
+      "year": 2024,
+      "type": "suv",
+      "variant": null,
+      "range_mi": 350,
+      "range_km": 563,
+      "battery_kwh": 100.0,
+      "acceleration_0_60_sec": 3.8,
+      "top_speed_mph": 155,
+      "top_speed_kmh": 250,
+      "dc_fast_charge_kw": 250,
+      "charge_time_10_80_min": 30,
+      "price_usd": 64990,
+      "country": "China",
+      "global_availability": true,
+      "image_url": "",
+      "description": "A flagship midsize crossover with a 100 kWh battery and advanced autonomous driving features."
+    },
+    {
+      "id": "byd-d1-2024",
+      "make": "BYD",
+      "model": "D1",
+      "year": 2024,
+      "type": "van",
+      "variant": "Long Range",
+      "range_mi": 300,
+      "range_km": 483,
+      "battery_kwh": 82.0,
+      "acceleration_0_60_sec": 9.5,
+      "top_speed_mph": 87,
+      "top_speed_kmh": 140,
+      "dc_fast_charge_kw": 150,
+      "charge_time_10_80_min": 35,
+      "price_usd": 39990,
+      "country": "China",
+      "global_availability": true,
+      "image_url": "",
+      "description": "A spacious electric minivan designed for families, offering three rows of seating and a high-capacity battery."
+    },
+    {
+      "id": "byd-d9-2024",
+      "make": "BYD",
+      "model": "D9",
+      "year": 2024,
+      "type": "bus",
+      "variant": "Standard",
+      "range_mi": 250,
+      "range_km": 402,
+      "battery_kwh": 70.0,
+      "acceleration_0_60_sec": null,
+      "top_speed_mph": 70,
+      "top_speed_kmh": 113,
+      "dc_fast_charge_kw": 120,
+      "charge_time_10_80_min": 45,
+      "price_usd": 199000,
+      "country": "China",
+      "global_availability": true,
+      "image_url": "",
+      "description": "A 12‑meter electric city bus with a modular interior and fast‑charging capability."
+    },
+    {
+      "id": "byd-d7-2024",
+      "make": "BYD",
+      "model": "D7",
+      "year": 2024,
+      "type": "bus",
+      "variant": "Long Range",
+      "range_mi": 280,
+      "range_km": 450,
+      "battery_kwh": 80.0,
+      "acceleration_0_60_sec": null,
+      "top_speed_mph": 75,
+      "top_speed_kmh": 121,
+      "dc_fast_charge_kw": 150,
+      "charge_time_10_80_min": 40,
+      "price_usd": 215000,
+      "country": "China",
+      "global_availability": true,
+      "image_url": "",
+      "description": "A 10‑meter electric transit bus offering extended range for intercity routes."
     }
   ]
 }
