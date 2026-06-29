@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-28T09:23:19Z",
+  "last_updated": "2026-06-29T11:13:47Z",
   "version": "1.0",
   "vehicle_count": 405,
   "vehicles": [
@@ -8148,7 +8148,7 @@
       "price_usd": 57990,
       "country": "Japan",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Toyota_bZ3C_001_%28cropped%29.jpg/960px-Toyota_bZ3C_001_%28cropped%29.jpg",
       "description": "Toyota's bZ5X Premium adds a larger 95 kWh battery and all‑wheel drive, targeting the upper midsize EV SUV segment."
     },
     {
@@ -8169,7 +8169,7 @@
       "price_usd": 119990,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/4_cilindros_y_museo_BMW%2C_M%C3%BAnich%2C_Alemania_2012-04-28%2C_DD_02.JPG/960px-4_cilindros_y_museo_BMW%2C_M%C3%BAnich%2C_Alemania_2012-04-28%2C_DD_02.JPG",
       "description": "The 2027 i7x M Performance combines the flagship i7 sedan's powertrain with a luxury SUV body."
     },
     {
@@ -8190,7 +8190,7 @@
       "price_usd": 74990,
       "country": "Sweden",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Polestar_headquarters_in_Gothenburg%2C_Sweden.png/640px-Polestar_headquarters_in_Gothenburg%2C_Sweden.png",
       "description": "Polestar 6 is the brand's first full‑size electric sedan, offering 115 kWh capacity and a 360‑mile EPA range."
     },
     {
