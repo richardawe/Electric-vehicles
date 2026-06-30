@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-29T11:13:47Z",
+  "last_updated": "2026-06-30T09:55:13Z",
   "version": "1.0",
-  "vehicle_count": 405,
+  "vehicle_count": 412,
   "vehicles": [
     {
       "id": "tesla-model-3-2024",
@@ -8211,7 +8211,7 @@
       "price_usd": 19990,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/2011_zero-xu.jpg/640px-2011_zero-xu.jpg",
       "description": "The 2027 Zero SR/F Premium adds a higher‑capacity 14.4 kWh battery, extending range to 200 mi while keeping sport‑bike performance."
     },
     {
@@ -8232,7 +8232,7 @@
       "price_usd": 42995,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/2016_Ford_Transit_350_2.2.jpg/640px-2016_Ford_Transit_350_2.2.jpg",
       "description": "The 2026 Ford E-Transit cargo van adds a larger 67 kWh battery and a higher roof option for greater payload capacity."
     },
     {
@@ -8253,7 +8253,7 @@
       "price_usd": 32995,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/2022_Chevrolet_Bolt_EV_2LT%2C_NYC_official_fleet_1.2.23.jpg/640px-2022_Chevrolet_Bolt_EV_2LT%2C_NYC_official_fleet_1.2.23.jpg",
       "description": "A refreshed 2027 Bolt EUV with a modest price bump, updated infotainment, and a 65 kWh battery delivering 250 mi of range."
     },
     {
@@ -8274,7 +8274,7 @@
       "price_usd": 68995,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/BMW_G60_520i_1X7A2443.jpg/640px-BMW_G60_520i_1X7A2443.jpg",
       "description": "BMW's first dedicated electric sedan, the i5 eDrive50, offers a 105 kWh pack and a 350‑mile WLTP range."
     },
     {
@@ -8295,7 +8295,7 @@
       "price_usd": 74995,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Mercedes-Benz_X294_IMG_8682.jpg/640px-Mercedes-Benz_X294_IMG_8682.jpg",
       "description": "The 2027 EQE SUV 400+ adds a larger battery and an updated MBUX system while keeping a sleek, aerodynamic silhouette."
     },
     {
@@ -8316,7 +8316,7 @@
       "price_usd": 57995,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Audi_Q5_2.0_TDI_quattro_S_line_%28GU%29_%E2%80%93_f_13102025.jpg/640px-Audi_Q5_2.0_TDI_quattro_S_line_%28GU%29_%E2%80%93_f_13102025.jpg",
       "description": "Audi expands its e-tron line with a sportback‑styled Q5, offering a 81 kWh pack and a 300‑mile EPA range."
     },
     {
@@ -8337,7 +8337,7 @@
       "price_usd": 64995,
       "country": "South Korea",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Genesis_GV60_1X7A5760.jpg/640px-Genesis_GV60_1X7A5760.jpg",
       "description": "The 2025 Genesis GV60 Performance delivers sport‑tuned dynamics with a 77 kWh battery and 280‑mile range."
     },
     {
@@ -8358,7 +8358,7 @@
       "price_usd": 48995,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Tesla_Model_Y_Premium_%28Facelift%29_%E2%80%93_f_05052026.jpg/640px-Tesla_Model_Y_Premium_%28Facelift%29_%E2%80%93_f_05052026.jpg",
       "description": "The 2025 Model Y Long Range adds a slightly larger battery and minor interior upgrades while keeping its 330‑mile EPA range."
     },
     {
@@ -8379,7 +8379,7 @@
       "price_usd": 84995,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/2023_Rivian_R1S_Adventure%2C_front_1.29.23.jpg/640px-2023_Rivian_R1S_Adventure%2C_front_1.29.23.jpg",
       "description": "Rivian's 2025 R1S Adventure trim adds off‑road suspension upgrades and a 135 kWh pack for 340‑mile range."
     },
     {
@@ -8507,6 +8507,153 @@
       "global_availability": true,
       "image_url": "",
       "description": "A 10‑meter electric transit bus offering extended range for intercity routes."
+    },
+    {
+      "id": "audi-q3-e-tron-sportback-2025",
+      "make": "Audi",
+      "model": "Q3 e-tron Sportback",
+      "year": 2025,
+      "type": "suv",
+      "variant": "Premium Plus",
+      "range_mi": 310,
+      "range_km": 499,
+      "battery_kwh": 71.0,
+      "acceleration_0_60_sec": 5.8,
+      "top_speed_mph": 124,
+      "top_speed_kmh": 200,
+      "dc_fast_charge_kw": 150,
+      "charge_time_10_80_min": 30,
+      "price_usd": 45990,
+      "country": "Germany",
+      "global_availability": true,
+      "image_url": "",
+      "description": "A compact premium SUV combining Audi's e-tron technology with a sporty roofline and a 71 kWh battery."
+    },
+    {
+      "id": "honda-e-pro-2025",
+      "make": "Honda",
+      "model": "e-Pro",
+      "year": 2025,
+      "type": "sedan",
+      "variant": "Pro",
+      "range_mi": 220,
+      "range_km": 354,
+      "battery_kwh": 45.0,
+      "acceleration_0_60_sec": 8.5,
+      "top_speed_mph": 93,
+      "top_speed_kmh": 150,
+      "dc_fast_charge_kw": 100,
+      "charge_time_10_80_min": 28,
+      "price_usd": 27990,
+      "country": "Japan",
+      "global_availability": true,
+      "image_url": "",
+      "description": "An upgraded version of the city‑focused Honda e, offering a larger battery and a higher‑output motor for longer range."
+    },
+    {
+      "id": "mercedes-benz-eqs-suv-2025",
+      "make": "Mercedes-Benz",
+      "model": "EQS SUV",
+      "year": 2025,
+      "type": "suv",
+      "variant": "450+",
+      "range_mi": 350,
+      "range_km": 563,
+      "battery_kwh": 108.0,
+      "acceleration_0_60_sec": 5.1,
+      "top_speed_mph": 130,
+      "top_speed_kmh": 209,
+      "dc_fast_charge_kw": 200,
+      "charge_time_10_80_min": 27,
+      "price_usd": 119990,
+      "country": "Germany",
+      "global_availability": true,
+      "image_url": "",
+      "description": "The flagship luxury SUV from Mercedes, featuring a 108 kWh pack and the latest MBUX infotainment system."
+    },
+    {
+      "id": "porsche-macan-ev-2026-sport",
+      "make": "Porsche",
+      "model": "Macan EV",
+      "year": 2026,
+      "type": "suv",
+      "variant": "Sport",
+      "range_mi": 280,
+      "range_km": 450,
+      "battery_kwh": 95.0,
+      "acceleration_0_60_sec": 4.0,
+      "top_speed_mph": 140,
+      "top_speed_kmh": 225,
+      "dc_fast_charge_kw": 250,
+      "charge_time_10_80_min": 24,
+      "price_usd": 84990,
+      "country": "Germany",
+      "global_availability": true,
+      "image_url": "",
+      "description": "Performance‑focused variant of Porsche's electric Macan, delivering sports‑car dynamics in an SUV package."
+    },
+    {
+      "id": "zero-dsr-f-2025-premium",
+      "make": "Zero",
+      "model": "DSR F",
+      "year": 2025,
+      "type": "motorcycle",
+      "variant": "Premium",
+      "range_mi": 200,
+      "range_km": 322,
+      "battery_kwh": 14.4,
+      "acceleration_0_60_sec": 2.9,
+      "top_speed_mph": 124,
+      "top_speed_kmh": 200,
+      "dc_fast_charge_kw": 6,
+      "charge_time_10_80_min": 45,
+      "price_usd": 21995,
+      "country": "USA",
+      "global_availability": true,
+      "image_url": "",
+      "description": "Zero's flagship sport motorcycle with a high‑output motor and premium features, targeting performance enthusiasts."
+    },
+    {
+      "id": "byd-han-ev-2025-performance",
+      "make": "BYD",
+      "model": "Han EV",
+      "year": 2025,
+      "type": "sedan",
+      "variant": "Performance",
+      "range_mi": 360,
+      "range_km": 579,
+      "battery_kwh": 96.0,
+      "acceleration_0_60_sec": 3.9,
+      "top_speed_mph": 155,
+      "top_speed_kmh": 250,
+      "dc_fast_charge_kw": 250,
+      "charge_time_10_80_min": 22,
+      "price_usd": 48990,
+      "country": "China",
+      "global_availability": true,
+      "image_url": "",
+      "description": "An upgraded performance version of BYD's flagship sedan, offering higher power and extended range."
+    },
+    {
+      "id": "nissan-ariya-2028-ultimate",
+      "make": "Nissan",
+      "model": "Ariya",
+      "year": 2028,
+      "type": "suv",
+      "variant": "Ultimate",
+      "range_mi": 380,
+      "range_km": 612,
+      "battery_kwh": 87.0,
+      "acceleration_0_60_sec": 4.9,
+      "top_speed_mph": 130,
+      "top_speed_kmh": 209,
+      "dc_fast_charge_kw": 250,
+      "charge_time_10_80_min": 23,
+      "price_usd": 56990,
+      "country": "Japan",
+      "global_availability": true,
+      "image_url": "",
+      "description": "Future‑ready Ariya with an enlarged battery and top‑level equipment, slated for launch in 2028."
     }
   ]
 }
