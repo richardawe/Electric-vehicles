@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-30T09:55:13Z",
+  "last_updated": "2026-07-01T10:03:35Z",
   "version": "1.0",
-  "vehicle_count": 412,
+  "vehicle_count": 417,
   "vehicles": [
     {
       "id": "tesla-model-3-2024",
@@ -8400,7 +8400,7 @@
       "price_usd": 74995,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/2022_Ford_F-150_Lightning_Lariat_in_Atlas_Blue_Metallic%2C_Front_Right%2C_08-06-2022.jpg/640px-2022_Ford_F-150_Lightning_Lariat_in_Atlas_Blue_Metallic%2C_Front_Right%2C_08-06-2022.jpg",
       "description": "The 2027 F‑150 Lightning Platinum receives a larger 131 kWh battery, extending its EPA range to about 350 mi."
     },
     {
@@ -8421,7 +8421,7 @@
       "price_usd": 39995,
       "country": "Sweden",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Volvo_EX30_IMG_8923.jpg/640px-Volvo_EX30_IMG_8923.jpg",
       "description": "Volvo's compact EX30 gets a premium trim in 2027, featuring a 78 kWh pack and a 300‑mile EPA range."
     },
     {
@@ -8442,7 +8442,7 @@
       "price_usd": 64990,
       "country": "China",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/%28CHN-Guangdong%29_Private_Nio_EC7_%E7%B2%A4BBY61xx_2024-05-25.jpg/640px-%28CHN-Guangdong%29_Private_Nio_EC7_%E7%B2%A4BBY61xx_2024-05-25.jpg",
       "description": "A flagship midsize crossover with a 100 kWh battery and advanced autonomous driving features."
     },
     {
@@ -8463,7 +8463,7 @@
       "price_usd": 39990,
       "country": "China",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/2020_BYD_D1_%28front%29.jpg/640px-2020_BYD_D1_%28front%29.jpg",
       "description": "A spacious electric minivan designed for families, offering three rows of seating and a high-capacity battery."
     },
     {
@@ -8484,7 +8484,7 @@
       "price_usd": 199000,
       "country": "China",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/BYD_Zhengzhou_All-Terrain_Circuit_entrance.png/640px-BYD_Zhengzhou_All-Terrain_Circuit_entrance.png",
       "description": "A 12‑meter electric city bus with a modular interior and fast‑charging capability."
     },
     {
@@ -8654,6 +8654,111 @@
       "global_availability": true,
       "image_url": "",
       "description": "Future‑ready Ariya with an enlarged battery and top‑level equipment, slated for launch in 2028."
+    },
+    {
+      "id": "byd-qin-plus-2024",
+      "make": "BYD",
+      "model": "Qin Plus EV",
+      "year": 2024,
+      "type": "sedan",
+      "variant": "Long Range",
+      "range_mi": 340,
+      "range_km": 547,
+      "battery_kwh": 77.0,
+      "acceleration_0_60_sec": 6.8,
+      "top_speed_mph": 115,
+      "top_speed_kmh": 185,
+      "dc_fast_charge_kw": 150,
+      "charge_time_10_80_min": 30,
+      "price_usd": 29990,
+      "country": "China",
+      "global_availability": true,
+      "image_url": "",
+      "description": "A compact electric sedan offering strong range and affordable pricing."
+    },
+    {
+      "id": "geely-zeekr-005-2024",
+      "make": "Geely",
+      "model": "Zeekr 005",
+      "year": 2024,
+      "type": "suv",
+      "variant": "Performance",
+      "range_mi": 310,
+      "range_km": 499,
+      "battery_kwh": 80.0,
+      "acceleration_0_60_sec": 4.5,
+      "top_speed_mph": 130,
+      "top_speed_kmh": 209,
+      "dc_fast_charge_kw": 200,
+      "charge_time_10_80_min": 28,
+      "price_usd": 44990,
+      "country": "China",
+      "global_availability": true,
+      "image_url": "",
+      "description": "Geely's sporty compact SUV with a high‑performance dual‑motor setup."
+    },
+    {
+      "id": "hyundai-ioniq-5-2027",
+      "make": "Hyundai",
+      "model": "Ioniq 5",
+      "year": 2027,
+      "type": "suv",
+      "variant": "Long Range AWD",
+      "range_mi": 360,
+      "range_km": 580,
+      "battery_kwh": 88.0,
+      "acceleration_0_60_sec": 5.2,
+      "top_speed_mph": 115,
+      "top_speed_kmh": 185,
+      "dc_fast_charge_kw": 350,
+      "charge_time_10_80_min": 22,
+      "price_usd": 48990,
+      "country": "South Korea",
+      "global_availability": true,
+      "image_url": "",
+      "description": "Future‑ready version of the Ioniq 5 with larger battery and faster charging."
+    },
+    {
+      "id": "kia-ev9-2029",
+      "make": "Kia",
+      "model": "EV9",
+      "year": 2029,
+      "type": "suv",
+      "variant": "Ultimate",
+      "range_mi": 380,
+      "range_km": 612,
+      "battery_kwh": 92.0,
+      "acceleration_0_60_sec": 4.9,
+      "top_speed_mph": 124,
+      "top_speed_kmh": 200,
+      "dc_fast_charge_kw": 300,
+      "charge_time_10_80_min": 24,
+      "price_usd": 62990,
+      "country": "South Korea",
+      "global_availability": true,
+      "image_url": "",
+      "description": "The flagship three‑row electric SUV from Kia, offering maximum range and premium features."
+    },
+    {
+      "id": "tesla-model-2-2025",
+      "make": "Tesla",
+      "model": "Model 2",
+      "year": 2025,
+      "type": "sedan",
+      "variant": "Standard",
+      "range_mi": 280,
+      "range_km": 450,
+      "battery_kwh": 55.0,
+      "acceleration_0_60_sec": 6.5,
+      "top_speed_mph": 115,
+      "top_speed_kmh": 185,
+      "dc_fast_charge_kw": 250,
+      "charge_time_10_80_min": 20,
+      "price_usd": 25990,
+      "country": "USA",
+      "global_availability": true,
+      "image_url": "",
+      "description": "Tesla's entry‑level compact sedan aimed at mass‑market affordability."
     }
   ]
 }
