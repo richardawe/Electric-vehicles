@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-01T10:03:35Z",
+  "last_updated": "2026-07-02T09:26:30Z",
   "version": "1.0",
   "vehicle_count": 417,
   "vehicles": [
@@ -8505,7 +8505,7 @@
       "price_usd": 215000,
       "country": "China",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/%D7%90%D7%95%D7%98%D7%95%D7%91%D7%95%D7%A1_%D7%97%D7%A9%D7%9E%D7%9C%D7%99_%D7%93%D7%9F_byd.jpg/960px-%D7%90%D7%95%D7%98%D7%95%D7%91%D7%95%D7%A1_%D7%97%D7%A9%D7%9E%D7%9C%D7%99_%D7%93%D7%9F_byd.jpg",
       "description": "A 10‑meter electric transit bus offering extended range for intercity routes."
     },
     {
@@ -8526,7 +8526,7 @@
       "price_usd": 45990,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/2021_Audi_Q4_e-tron_Sport_35.jpg/640px-2021_Audi_Q4_e-tron_Sport_35.jpg",
       "description": "A compact premium SUV combining Audi's e-tron technology with a sporty roofline and a 71 kWh battery."
     },
     {
@@ -8547,7 +8547,7 @@
       "price_usd": 27990,
       "country": "Japan",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Honda_EM1_e_2026.jpg/640px-Honda_EM1_e_2026.jpg",
       "description": "An upgraded version of the city‑focused Honda e, offering a larger battery and a higher‑output motor for longer range."
     },
     {
@@ -8568,7 +8568,7 @@
       "price_usd": 119990,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Mercedes-Benz_X296_1X7A1725.jpg/640px-Mercedes-Benz_X296_1X7A1725.jpg",
       "description": "The flagship luxury SUV from Mercedes, featuring a 108 kWh pack and the latest MBUX infotainment system."
     },
     {
@@ -8589,7 +8589,7 @@
       "price_usd": 84990,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Porsche_Macan_4_IMG_2153.jpg/640px-Porsche_Macan_4_IMG_2153.jpg",
       "description": "Performance‑focused variant of Porsche's electric Macan, delivering sports‑car dynamics in an SUV package."
     },
     {
