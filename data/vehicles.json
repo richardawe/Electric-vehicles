@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-02T09:26:30Z",
+  "last_updated": "2026-07-03T09:29:39Z",
   "version": "1.0",
   "vehicle_count": 417,
   "vehicles": [
@@ -8610,7 +8610,7 @@
       "price_usd": 21995,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/2011_zero-xu.jpg/640px-2011_zero-xu.jpg",
       "description": "Zero's flagship sport motorcycle with a high‑output motor and premium features, targeting performance enthusiasts."
     },
     {
@@ -8631,7 +8631,7 @@
       "price_usd": 48990,
       "country": "China",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/2023_BYD_Han_DM-i_%28facelift%29%2C_front_8.17.23.jpg/640px-2023_BYD_Han_DM-i_%28facelift%29%2C_front_8.17.23.jpg",
       "description": "An upgraded performance version of BYD's flagship sedan, offering higher power and extended range."
     },
     {
@@ -8652,7 +8652,7 @@
       "price_usd": 56990,
       "country": "Japan",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/2023_Nissan_Ariya_Advance_Front.jpg/640px-2023_Nissan_Ariya_Advance_Front.jpg",
       "description": "Future‑ready Ariya with an enlarged battery and top‑level equipment, slated for launch in 2028."
     },
     {
@@ -8673,7 +8673,7 @@
       "price_usd": 29990,
       "country": "China",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/BYD_Qin_Plus_DM-i_003_%28cropped%29.jpg/640px-BYD_Qin_Plus_DM-i_003_%28cropped%29.jpg",
       "description": "A compact electric sedan offering strong range and affordable pricing."
     },
     {
