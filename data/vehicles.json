@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-04T08:48:26Z",
+  "last_updated": "2026-07-05T09:16:08Z",
   "version": "1.0",
   "vehicle_count": 425,
   "vehicles": [
@@ -8778,7 +8778,7 @@
       "price_usd": 44990,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Volkswagen_ID._Buzz_1X7A6263.jpg/640px-Volkswagen_ID._Buzz_1X7A6263.jpg",
       "description": "Volkswagen's flagship electric SUV offering spacious interior and a 82 kWh battery."
     },
     {
@@ -8799,7 +8799,7 @@
       "price_usd": 59990,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/2020_Chevrolet_Spark_LS%2C_front_right%2C_09-07-2024.jpg/640px-2020_Chevrolet_Spark_LS%2C_front_right%2C_09-07-2024.jpg",
       "description": "Chevrolet's entry‑level Silverado EV with a 120 kWh pack and a practical work‑truck platform."
     },
     {
@@ -8820,7 +8820,7 @@
       "price_usd": 52990,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Ford_F-150_XL_regular_cab.jpg/640px-Ford_F-150_XL_regular_cab.jpg",
       "description": "A more affordable Lightning variant with a 98 kWh battery and solid payload capacity."
     },
     {
@@ -8841,7 +8841,7 @@
       "price_usd": 45990,
       "country": "Japan",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/2023_Nissan_Ariya_Advance_Front.jpg/640px-2023_Nissan_Ariya_Advance_Front.jpg",
       "description": "Updated Ariya with Nissan’s e‑4ORCE+ dual‑motor system for better performance and efficiency."
     },
     {
@@ -8862,7 +8862,7 @@
       "price_usd": 74990,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Porsche_Macan_4_IMG_2153.jpg/640px-Porsche_Macan_4_IMG_2153.jpg",
       "description": "Performance‑focused version of Porsche’s electric Macan with sport‑tuned suspension."
     },
     {
@@ -8883,7 +8883,7 @@
       "price_usd": 19995,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/2011_zero-xu.jpg/640px-2011_zero-xu.jpg",
       "description": "Zero’s high‑performance SR/F with the DSR package, offering upgraded suspension and electronics."
     },
     {
