@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-06T10:53:49Z",
+  "last_updated": "2026-07-07T09:54:12Z",
   "version": "1.0",
   "vehicle_count": 429,
   "vehicles": [
@@ -8988,7 +8988,7 @@
       "price_usd": 44990,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/RivianR2.jpg/640px-RivianR2.jpg",
       "description": "Compact, affordable Rivian SUV positioned below the R1S, with a 105 kWh battery and dual‑motor layout."
     },
     {
@@ -9009,7 +9009,7 @@
       "price_usd": 69990,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/2022_Ford_F-150_Lightning_Lariat_in_Atlas_Blue_Metallic%2C_Front_Right%2C_08-06-2022.jpg/640px-2022_Ford_F-150_Lightning_Lariat_in_Atlas_Blue_Metallic%2C_Front_Right%2C_08-06-2022.jpg",
       "description": "Next‑generation F‑150 Lightning with a larger 131 kWh pack, higher payload and extended range."
     }
   ]
