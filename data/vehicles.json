@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-13T09:44:31Z",
+  "last_updated": "2026-07-14T08:19:15Z",
   "version": "1.0",
   "vehicle_count": 445,
   "vehicles": [
@@ -9240,7 +9240,7 @@
       "price_usd": 64990,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Rivian_Normal_Plant_Floor.jpg/960px-Rivian_Normal_Plant_Floor.jpg",
       "description": "Rivian's sport‑oriented trim of the compact R2 SUV with off‑road suspension."
     },
     {
