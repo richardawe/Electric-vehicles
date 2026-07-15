@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-14T08:19:15Z",
+  "last_updated": "2026-07-15T08:24:51Z",
   "version": "1.0",
   "vehicle_count": 445,
   "vehicles": [
@@ -9261,7 +9261,7 @@
       "price_usd": 44990,
       "country": "Japan",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Toyota_bZ3C_001_%28cropped%29.jpg/960px-Toyota_bZ3C_001_%28cropped%29.jpg",
       "description": "Toyota's first midsize electric SUV, built on the e-TNGA platform."
     },
     {
@@ -9282,7 +9282,7 @@
       "price_usd": 33990,
       "country": "USA",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/2022_Chevrolet_Bolt_EV_2LT%2C_NYC_official_fleet_1.2.23.jpg/640px-2022_Chevrolet_Bolt_EV_2LT%2C_NYC_official_fleet_1.2.23.jpg",
       "description": "Updated Bolt EUV with larger battery and refreshed styling for the 2028 model year."
     },
     {
@@ -9303,7 +9303,7 @@
       "price_usd": 48990,
       "country": "South Korea",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Hyundai_Ioniq_5_AWD_Techniq-Paket_%E2%80%93_f_31122024.jpg/640px-Hyundai_Ioniq_5_AWD_Techniq-Paket_%E2%80%93_f_31122024.jpg",
       "description": "Seventh‑year refresh of Hyundai's flagship EV with higher capacity battery and 350 kW charging."
     },
     {
@@ -9324,7 +9324,7 @@
       "price_usd": 52990,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/2025_Volkswagen_ID4_Pro_Redspot_front.jpg/640px-2025_Volkswagen_ID4_Pro_Redspot_front.jpg",
       "description": "Performance‑oriented version of the ID.4 with sport suspension and dual‑motor setup."
     },
     {
