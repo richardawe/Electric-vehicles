@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-15T08:24:51Z",
+  "last_updated": "2026-07-16T08:24:05Z",
   "version": "1.0",
   "vehicle_count": 445,
   "vehicles": [
@@ -9345,7 +9345,7 @@
       "price_usd": 48990,
       "country": "Germany",
       "global_availability": true,
-      "image_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/2022_BMW_X1_sDrive18d_M_Sport_MHEV_Automatic_2.0.jpg/640px-2022_BMW_X1_sDrive18d_M_Sport_MHEV_Automatic_2.0.jpg",
       "description": "Compact electric SUV expanding BMW's iX family, targeting urban buyers."
     }
   ]
